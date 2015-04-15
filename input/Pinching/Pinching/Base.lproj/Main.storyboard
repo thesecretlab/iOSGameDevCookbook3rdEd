@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pinching" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Spaceship" translatesAutoresizingMaskIntoConstraints="NO" id="QiF-rh-ZMq">
+                                <rect key="frame" x="200" y="28" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="E30-3U-fuh"/>
+                                    <constraint firstAttribute="width" secondItem="QiF-rh-ZMq" secondAttribute="height" multiplier="1:1" id="wnN-Ra-CDr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-Lz-N6L">
+                                <rect key="frame" x="282" y="559" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="YeF-Lz-N6L" secondAttribute="centerX" id="HDD-sJ-ZLo"/>
+                            <constraint firstItem="QiF-rh-ZMq" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Pim-nz-i2F"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="YeF-Lz-N6L" secondAttribute="bottom" constant="20" id="Zgt-hn-5kD"/>
+                            <constraint firstItem="QiF-rh-ZMq" firstAttribute="width" secondItem="QiF-rh-ZMq" secondAttribute="height" multiplier="1:1" id="iBZ-KJ-Qca"/>
+                            <constraint firstAttribute="centerX" secondItem="QiF-rh-ZMq" secondAttribute="centerX" id="j3N-4x-FZ8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scalingStatusLabel" destination="YeF-Lz-N6L" id="6eV-Wv-AIj"/>
+                        <outlet property="scalingView" destination="QiF-rh-ZMq" id="JoB-gM-Ha8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Spaceship" width="394" height="347"/>
+    </resources>
+</document>

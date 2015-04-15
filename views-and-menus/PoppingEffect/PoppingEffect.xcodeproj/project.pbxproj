@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		683DC9CF1A66288600A4B9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DC9CE1A66288600A4B9F5 /* AppDelegate.swift */; };
+		683DC9D11A66288600A4B9F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DC9D01A66288600A4B9F5 /* ViewController.swift */; };
+		683DC9D41A66288600A4B9F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683DC9D21A66288600A4B9F5 /* Main.storyboard */; };
+		683DC9D61A66288600A4B9F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683DC9D51A66288600A4B9F5 /* Images.xcassets */; };
+		683DC9D91A66288600A4B9F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683DC9D71A66288600A4B9F5 /* LaunchScreen.xib */; };
+		683DC9E51A66288600A4B9F5 /* PoppingEffectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683DC9E41A66288600A4B9F5 /* PoppingEffectTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		683DC9DF1A66288600A4B9F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 683DC9C11A66288600A4B9F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 683DC9C81A66288600A4B9F5;
+			remoteInfo = PoppingEffect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		683DC9C91A66288600A4B9F5 /* PoppingEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoppingEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		683DC9CD1A66288600A4B9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683DC9CE1A66288600A4B9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		683DC9D01A66288600A4B9F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		683DC9D31A66288600A4B9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		683DC9D51A66288600A4B9F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		683DC9D81A66288600A4B9F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		683DC9DE1A66288600A4B9F5 /* PoppingEffectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoppingEffectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		683DC9E31A66288600A4B9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683DC9E41A66288600A4B9F5 /* PoppingEffectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoppingEffectTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		683DC9C61A66288600A4B9F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683DC9DB1A66288600A4B9F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		683DC9C01A66288600A4B9F5 = {
+			isa = PBXGroup;
+			children = (
+				683DC9CB1A66288600A4B9F5 /* PoppingEffect */,
+				683DC9E11A66288600A4B9F5 /* PoppingEffectTests */,
+				683DC9CA1A66288600A4B9F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		683DC9CA1A66288600A4B9F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				683DC9C91A66288600A4B9F5 /* PoppingEffect.app */,
+				683DC9DE1A66288600A4B9F5 /* PoppingEffectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		683DC9CB1A66288600A4B9F5 /* PoppingEffect */ = {
+			isa = PBXGroup;
+			children = (
+				683DC9CE1A66288600A4B9F5 /* AppDelegate.swift */,
+				683DC9D01A66288600A4B9F5 /* ViewController.swift */,
+				683DC9D21A66288600A4B9F5 /* Main.storyboard */,
+				683DC9D51A66288600A4B9F5 /* Images.xcassets */,
+				683DC9D71A66288600A4B9F5 /* LaunchScreen.xib */,
+				683DC9CC1A66288600A4B9F5 /* Supporting Files */,
+			);
+			path = PoppingEffect;
+			sourceTree = "<group>";
+		};
+		683DC9CC1A66288600A4B9F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				683DC9CD1A66288600A4B9F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		683DC9E11A66288600A4B9F5 /* PoppingEffectTests */ = {
+			isa = PBXGroup;
+			children = (
+				683DC9E41A66288600A4B9F5 /* PoppingEffectTests.swift */,
+				683DC9E21A66288600A4B9F5 /* Supporting Files */,
+			);
+			path = PoppingEffectTests;
+			sourceTree = "<group>";
+		};
+		683DC9E21A66288600A4B9F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				683DC9E31A66288600A4B9F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		683DC9C81A66288600A4B9F5 /* PoppingEffect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 683DC9E81A66288600A4B9F5 /* Build configuration list for PBXNativeTarget "PoppingEffect" */;
+			buildPhases = (
+				683DC9C51A66288600A4B9F5 /* Sources */,
+				683DC9C61A66288600A4B9F5 /* Frameworks */,
+				683DC9C71A66288600A4B9F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoppingEffect;
+			productName = PoppingEffect;
+			productReference = 683DC9C91A66288600A4B9F5 /* PoppingEffect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		683DC9DD1A66288600A4B9F5 /* PoppingEffectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 683DC9EB1A66288600A4B9F5 /* Build configuration list for PBXNativeTarget "PoppingEffectTests" */;
+			buildPhases = (
+				683DC9DA1A66288600A4B9F5 /* Sources */,
+				683DC9DB1A66288600A4B9F5 /* Frameworks */,
+				683DC9DC1A66288600A4B9F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				683DC9E01A66288600A4B9F5 /* PBXTargetDependency */,
+			);
+			name = PoppingEffectTests;
+			productName = PoppingEffectTests;
+			productReference = 683DC9DE1A66288600A4B9F5 /* PoppingEffectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		683DC9C11A66288600A4B9F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Secret Lab";
+				TargetAttributes = {
+					683DC9C81A66288600A4B9F5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					683DC9DD1A66288600A4B9F5 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 683DC9C81A66288600A4B9F5;
+					};
+				};
+			};
+			buildConfigurationList = 683DC9C41A66288600A4B9F5 /* Build configuration list for PBXProject "PoppingEffect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 683DC9C01A66288600A4B9F5;
+			productRefGroup = 683DC9CA1A66288600A4B9F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				683DC9C81A66288600A4B9F5 /* PoppingEffect */,
+				683DC9DD1A66288600A4B9F5 /* PoppingEffectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		683DC9C71A66288600A4B9F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683DC9D41A66288600A4B9F5 /* Main.storyboard in Resources */,
+				683DC9D91A66288600A4B9F5 /* LaunchScreen.xib in Resources */,
+				683DC9D61A66288600A4B9F5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683DC9DC1A66288600A4B9F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		683DC9C51A66288600A4B9F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683DC9D11A66288600A4B9F5 /* ViewController.swift in Sources */,
+				683DC9CF1A66288600A4B9F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683DC9DA1A66288600A4B9F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683DC9E51A66288600A4B9F5 /* PoppingEffectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		683DC9E01A66288600A4B9F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 683DC9C81A66288600A4B9F5 /* PoppingEffect */;
+			targetProxy = 683DC9DF1A66288600A4B9F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		683DC9D21A66288600A4B9F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				683DC9D31A66288600A4B9F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		683DC9D71A66288600A4B9F5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				683DC9D81A66288600A4B9F5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		683DC9E61A66288600A4B9F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		683DC9E71A66288600A4B9F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		683DC9E91A66288600A4B9F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PoppingEffect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		683DC9EA1A66288600A4B9F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PoppingEffect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		683DC9EC1A66288600A4B9F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PoppingEffectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoppingEffect.app/PoppingEffect";
+			};
+			name = Debug;
+		};
+		683DC9ED1A66288600A4B9F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PoppingEffectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoppingEffect.app/PoppingEffect";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		683DC9C41A66288600A4B9F5 /* Build configuration list for PBXProject "PoppingEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683DC9E61A66288600A4B9F5 /* Debug */,
+				683DC9E71A66288600A4B9F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		683DC9E81A66288600A4B9F5 /* Build configuration list for PBXNativeTarget "PoppingEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683DC9E91A66288600A4B9F5 /* Debug */,
+				683DC9EA1A66288600A4B9F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		683DC9EB1A66288600A4B9F5 /* Build configuration list for PBXNativeTarget "PoppingEffectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683DC9EC1A66288600A4B9F5 /* Debug */,
+				683DC9ED1A66288600A4B9F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 683DC9C11A66288600A4B9F5 /* Project object */;
+}

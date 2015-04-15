@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DragAndDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Card Slot" translatesAutoresizingMaskIntoConstraints="NO" id="J5N-Lu-dLI" customClass="CardSlot" customModule="DragAndDrop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="140" height="210"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="deleteOnDrop" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Card Slot" translatesAutoresizingMaskIntoConstraints="NO" id="akW-Xj-r0L" customClass="CardSlot" customModule="DragAndDrop" customModuleProvider="target">
+                                <rect key="frame" x="444" y="28" width="140" height="210"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Card Slot" translatesAutoresizingMaskIntoConstraints="NO" id="tKE-EJ-bgt" customClass="CardSlot" customModule="DragAndDrop" customModuleProvider="target">
+                                <rect key="frame" x="16" y="370" width="140" height="210"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Card Slot" translatesAutoresizingMaskIntoConstraints="NO" id="7KJ-3D-mK5" customClass="CardSlot" customModule="DragAndDrop" customModuleProvider="target">
+                                <rect key="frame" x="444" y="370" width="140" height="210"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="tKE-EJ-bgt" secondAttribute="bottom" constant="20" id="0Uf-JB-iFe"/>
+                            <constraint firstItem="J5N-Lu-dLI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Po2-pp-88I"/>
+                            <constraint firstItem="7KJ-3D-mK5" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="QIf-3x-qDt"/>
+                            <constraint firstItem="J5N-Lu-dLI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Z1L-Mw-nfU"/>
+                            <constraint firstItem="akW-Xj-r0L" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="ZEM-pu-K4O"/>
+                            <constraint firstItem="tKE-EJ-bgt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="gFw-3w-ag2"/>
+                            <constraint firstItem="akW-Xj-r0L" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="nYH-GR-CPn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7KJ-3D-mK5" secondAttribute="bottom" constant="20" id="tIW-DJ-FoW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Card Slot" width="140" height="210"/>
+    </resources>
+</document>

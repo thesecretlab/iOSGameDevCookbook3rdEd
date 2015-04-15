@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Sharing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QU9-sm-47Y">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGY-4Y-UEy">
+                                <rect key="frame" x="264" y="66" width="73" height="30"/>
+                                <state key="normal" title="Share Text">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EDg-db-OrJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxr-PC-cLX">
+                                <rect key="frame" x="232" y="104" width="137" height="30"/>
+                                <state key="normal" title="Share Text and URL">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareTextAndURL:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Unf-Y8-Ufq"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" verticalHuggingPriority="100" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="Q6m-Ia-LzT">
+                                <rect key="frame" x="16" y="212" width="568" height="368"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q6m-Ia-LzT" secondAttribute="height" multiplier="71:46" id="0QS-Qz-Hbd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-tD-nPd">
+                                <rect key="frame" x="206" y="142" width="188" height="30"/>
+                                <state key="normal" title="Share Text, Image and URL">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareTextImageAndURL:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h9O-h4-mg9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q6m-Ia-LzT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="2IX-Rh-gWT"/>
+                            <constraint firstItem="rxr-PC-cLX" firstAttribute="top" secondItem="wGY-4Y-UEy" secondAttribute="bottom" constant="8" id="7C4-Wx-C7Z"/>
+                            <constraint firstItem="Q6m-Ia-LzT" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="7XK-qy-aVX"/>
+                            <constraint firstItem="0LF-tD-nPd" firstAttribute="top" secondItem="rxr-PC-cLX" secondAttribute="bottom" constant="8" id="BM4-PM-znc"/>
+                            <constraint firstItem="QU9-sm-47Y" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Eag-9N-Uno"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Q6m-Ia-LzT" secondAttribute="bottom" constant="20" id="Ln6-aE-etv"/>
+                            <constraint firstItem="QU9-sm-47Y" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="RC8-YN-aDm"/>
+                            <constraint firstItem="rxr-PC-cLX" firstAttribute="centerX" secondItem="wGY-4Y-UEy" secondAttribute="centerX" id="RuN-wW-iZI"/>
+                            <constraint firstItem="QU9-sm-47Y" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="fxj-Vh-euq"/>
+                            <constraint firstItem="0LF-tD-nPd" firstAttribute="centerX" secondItem="rxr-PC-cLX" secondAttribute="centerX" constant="-0.5" id="l3h-oE-oZx"/>
+                            <constraint firstItem="Q6m-Ia-LzT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0LF-tD-nPd" secondAttribute="bottom" constant="8" id="pL5-Gg-bmh"/>
+                            <constraint firstItem="wGY-4Y-UEy" firstAttribute="centerX" secondItem="QU9-sm-47Y" secondAttribute="centerX" constant="0.5" id="qCO-64-uMF"/>
+                            <constraint firstItem="wGY-4Y-UEy" firstAttribute="top" secondItem="QU9-sm-47Y" secondAttribute="bottom" constant="8" id="uuY-WG-5hx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Q6m-Ia-LzT" id="uFN-hx-bUu"/>
+                        <outlet property="textField" destination="QU9-sm-47Y" id="YbP-Pw-9k9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="357"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cat" width="490" height="368"/>
+    </resources>
+</document>

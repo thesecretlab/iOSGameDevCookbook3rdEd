@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SimpleAudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzW-PZ-Ded">
+                                <rect key="frame" x="236" y="244" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="J3K-3E-CFG"/>
+                                </constraints>
+                                <state key="normal" title="Play Sound">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oux-OB-WjV"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="esM-Kz-AAV">
+                                <rect key="frame" x="315" y="276.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="loopModeChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="bZf-CE-0Kh"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Loop" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="705-Eh-vM1">
+                                <rect key="frame" x="236" y="282" width="39.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NzW-PZ-Ded" firstAttribute="leading" secondItem="705-Eh-vM1" secondAttribute="leading" id="9Np-8m-JvY"/>
+                            <constraint firstItem="NzW-PZ-Ded" firstAttribute="trailing" secondItem="esM-Kz-AAV" secondAttribute="trailing" id="G4j-af-s2b"/>
+                            <constraint firstItem="705-Eh-vM1" firstAttribute="top" secondItem="NzW-PZ-Ded" secondAttribute="bottom" constant="8" id="GMa-9D-WiL"/>
+                            <constraint firstItem="705-Eh-vM1" firstAttribute="centerY" secondItem="esM-Kz-AAV" secondAttribute="centerY" id="INp-sa-ftW"/>
+                            <constraint firstAttribute="centerX" secondItem="NzW-PZ-Ded" secondAttribute="centerX" id="UN3-Y4-Zq9"/>
+                            <constraint firstAttribute="centerY" secondItem="NzW-PZ-Ded" secondAttribute="centerY" constant="41" id="gBx-Bx-o4O"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

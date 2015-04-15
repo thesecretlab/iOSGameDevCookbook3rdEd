@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6810D35F1A81B9B200CBD077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6810D35E1A81B9B200CBD077 /* AppDelegate.swift */; };
+		6810D3611A81B9B200CBD077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6810D3601A81B9B200CBD077 /* ViewController.swift */; };
+		6810D3641A81B9B200CBD077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6810D3621A81B9B200CBD077 /* Main.storyboard */; };
+		6810D3661A81B9B200CBD077 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6810D3651A81B9B200CBD077 /* Images.xcassets */; };
+		6810D3691A81B9B200CBD077 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6810D3671A81B9B200CBD077 /* LaunchScreen.xib */; };
+		6810D3751A81B9B200CBD077 /* iCloudSavedGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6810D3741A81B9B200CBD077 /* iCloudSavedGamesTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6810D36F1A81B9B200CBD077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6810D3511A81B9B200CBD077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6810D3581A81B9B200CBD077;
+			remoteInfo = iCloudSavedGames;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6810D3591A81B9B200CBD077 /* iCloudSavedGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudSavedGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6810D35D1A81B9B200CBD077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6810D35E1A81B9B200CBD077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6810D3601A81B9B200CBD077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6810D3631A81B9B200CBD077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6810D3651A81B9B200CBD077 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6810D3681A81B9B200CBD077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6810D36E1A81B9B200CBD077 /* iCloudSavedGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCloudSavedGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6810D3731A81B9B200CBD077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6810D3741A81B9B200CBD077 /* iCloudSavedGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudSavedGamesTests.swift; sourceTree = "<group>"; };
+		6810D37E1A81BAF000CBD077 /* iCloudSavedGames.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iCloudSavedGames.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6810D3561A81B9B200CBD077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6810D36B1A81B9B200CBD077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6810D3501A81B9B200CBD077 = {
+			isa = PBXGroup;
+			children = (
+				6810D35B1A81B9B200CBD077 /* iCloudSavedGames */,
+				6810D3711A81B9B200CBD077 /* iCloudSavedGamesTests */,
+				6810D35A1A81B9B200CBD077 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6810D35A1A81B9B200CBD077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6810D3591A81B9B200CBD077 /* iCloudSavedGames.app */,
+				6810D36E1A81B9B200CBD077 /* iCloudSavedGamesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6810D35B1A81B9B200CBD077 /* iCloudSavedGames */ = {
+			isa = PBXGroup;
+			children = (
+				6810D37E1A81BAF000CBD077 /* iCloudSavedGames.entitlements */,
+				6810D35E1A81B9B200CBD077 /* AppDelegate.swift */,
+				6810D3601A81B9B200CBD077 /* ViewController.swift */,
+				6810D3621A81B9B200CBD077 /* Main.storyboard */,
+				6810D3651A81B9B200CBD077 /* Images.xcassets */,
+				6810D3671A81B9B200CBD077 /* LaunchScreen.xib */,
+				6810D35C1A81B9B200CBD077 /* Supporting Files */,
+			);
+			path = iCloudSavedGames;
+			sourceTree = "<group>";
+		};
+		6810D35C1A81B9B200CBD077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6810D35D1A81B9B200CBD077 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6810D3711A81B9B200CBD077 /* iCloudSavedGamesTests */ = {
+			isa = PBXGroup;
+			children = (
+				6810D3741A81B9B200CBD077 /* iCloudSavedGamesTests.swift */,
+				6810D3721A81B9B200CBD077 /* Supporting Files */,
+			);
+			path = iCloudSavedGamesTests;
+			sourceTree = "<group>";
+		};
+		6810D3721A81B9B200CBD077 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6810D3731A81B9B200CBD077 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6810D3581A81B9B200CBD077 /* iCloudSavedGames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6810D3781A81B9B200CBD077 /* Build configuration list for PBXNativeTarget "iCloudSavedGames" */;
+			buildPhases = (
+				6810D3551A81B9B200CBD077 /* Sources */,
+				6810D3561A81B9B200CBD077 /* Frameworks */,
+				6810D3571A81B9B200CBD077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCloudSavedGames;
+			productName = iCloudSavedGames;
+			productReference = 6810D3591A81B9B200CBD077 /* iCloudSavedGames.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6810D36D1A81B9B200CBD077 /* iCloudSavedGamesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6810D37B1A81B9B200CBD077 /* Build configuration list for PBXNativeTarget "iCloudSavedGamesTests" */;
+			buildPhases = (
+				6810D36A1A81B9B200CBD077 /* Sources */,
+				6810D36B1A81B9B200CBD077 /* Frameworks */,
+				6810D36C1A81B9B200CBD077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6810D3701A81B9B200CBD077 /* PBXTargetDependency */,
+			);
+			name = iCloudSavedGamesTests;
+			productName = iCloudSavedGamesTests;
+			productReference = 6810D36E1A81B9B200CBD077 /* iCloudSavedGamesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6810D3511A81B9B200CBD077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Secret Lab";
+				TargetAttributes = {
+					6810D3581A81B9B200CBD077 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5V2A4389PA;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					6810D36D1A81B9B200CBD077 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 6810D3581A81B9B200CBD077;
+					};
+				};
+			};
+			buildConfigurationList = 6810D3541A81B9B200CBD077 /* Build configuration list for PBXProject "iCloudSavedGames" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6810D3501A81B9B200CBD077;
+			productRefGroup = 6810D35A1A81B9B200CBD077 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6810D3581A81B9B200CBD077 /* iCloudSavedGames */,
+				6810D36D1A81B9B200CBD077 /* iCloudSavedGamesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6810D3571A81B9B200CBD077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6810D3641A81B9B200CBD077 /* Main.storyboard in Resources */,
+				6810D3691A81B9B200CBD077 /* LaunchScreen.xib in Resources */,
+				6810D3661A81B9B200CBD077 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6810D36C1A81B9B200CBD077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6810D3551A81B9B200CBD077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6810D3611A81B9B200CBD077 /* ViewController.swift in Sources */,
+				6810D35F1A81B9B200CBD077 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6810D36A1A81B9B200CBD077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6810D3751A81B9B200CBD077 /* iCloudSavedGamesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6810D3701A81B9B200CBD077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6810D3581A81B9B200CBD077 /* iCloudSavedGames */;
+			targetProxy = 6810D36F1A81B9B200CBD077 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6810D3621A81B9B200CBD077 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6810D3631A81B9B200CBD077 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6810D3671A81B9B200CBD077 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6810D3681A81B9B200CBD077 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6810D3761A81B9B200CBD077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6810D3771A81B9B200CBD077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6810D3791A81B9B200CBD077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iCloudSavedGames/iCloudSavedGames.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iCloudSavedGames/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		6810D37A1A81B9B200CBD077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iCloudSavedGames/iCloudSavedGames.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = iCloudSavedGames/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		6810D37C1A81B9B200CBD077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iCloudSavedGamesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCloudSavedGames.app/iCloudSavedGames";
+			};
+			name = Debug;
+		};
+		6810D37D1A81B9B200CBD077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iCloudSavedGamesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCloudSavedGames.app/iCloudSavedGames";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6810D3541A81B9B200CBD077 /* Build configuration list for PBXProject "iCloudSavedGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6810D3761A81B9B200CBD077 /* Debug */,
+				6810D3771A81B9B200CBD077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6810D3781A81B9B200CBD077 /* Build configuration list for PBXNativeTarget "iCloudSavedGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6810D3791A81B9B200CBD077 /* Debug */,
+				6810D37A1A81B9B200CBD077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6810D37B1A81B9B200CBD077 /* Build configuration list for PBXNativeTarget "iCloudSavedGamesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6810D37C1A81B9B200CBD077 /* Debug */,
+				6810D37D1A81B9B200CBD077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6810D3511A81B9B200CBD077 /* Project object */;
+}

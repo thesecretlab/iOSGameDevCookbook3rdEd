@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QOh-WA-f2j">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aLt-Ka-i5G">
+            <objects>
+                <navigationController id="QOh-WA-f2j" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ssO-fj-gEK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="M3o-AK-0gY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAJ-cR-ooF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="71"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GameCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Rm-fI-HA9">
+                                <rect key="frame" x="16" y="72" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Rm-fI-HA9" secondAttribute="height" multiplier="1:1" id="L8T-qO-P7A"/>
+                                    <constraint firstAttribute="height" constant="50" id="zvC-cr-Drf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Signed In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3c-tq-QWh">
+                                <rect key="frame" x="82" y="82" width="502" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yap-lh-Nrs">
+                                <rect key="frame" x="16" y="130" width="489" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-N7-xq5">
+                                <rect key="frame" x="513" y="130" width="71" height="30"/>
+                                <state key="normal" title="Log Score">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logScore:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Kg-hg-5KF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jp-g0-lvh">
+                                <rect key="frame" x="455" y="168" width="129" height="30"/>
+                                <state key="normal" title="Log and Challenge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logScoreAndChallengeFriend:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XsZ-Kf-3v4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8n-TM-NE9">
+                                <rect key="frame" x="16" y="168" width="91" height="30"/>
+                                <state key="normal" title="Show Scores">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showScores:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b9p-yO-9rU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlQ-AD-VYa">
+                                <rect key="frame" x="233" y="550" width="135" height="30"/>
+                                <state key="normal" title="Show Game Center">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showGameCenter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oJN-lR-h2E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah4-XO-KyI">
+                                <rect key="frame" x="258" y="512" width="85" height="30"/>
+                                <state key="normal" title="Find Players">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startMatchmaking:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xga-ic-Eku"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Rm-fI-HA9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="1Lg-x4-9vc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fzV-N7-xq5" secondAttribute="trailing" id="3R7-Kb-Zi6"/>
+                            <constraint firstItem="fzV-N7-xq5" firstAttribute="trailing" secondItem="3Jp-g0-lvh" secondAttribute="trailing" id="86v-Qx-75y"/>
+                            <constraint firstItem="yap-lh-Nrs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="DTQ-o3-XfL"/>
+                            <constraint firstItem="yap-lh-Nrs" firstAttribute="leading" secondItem="p8n-TM-NE9" secondAttribute="leading" id="EtA-nc-NPg"/>
+                            <constraint firstItem="A3c-tq-QWh" firstAttribute="leading" secondItem="3Rm-fI-HA9" secondAttribute="trailing" constant="16" id="JId-MU-x2Y"/>
+                            <constraint firstItem="3Rm-fI-HA9" firstAttribute="top" secondItem="A3c-tq-QWh" secondAttribute="top" constant="-10" id="KF4-MG-vQW"/>
+                            <constraint firstItem="3Rm-fI-HA9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="NR7-ls-ThG"/>
+                            <constraint firstItem="yap-lh-Nrs" firstAttribute="top" secondItem="3Rm-fI-HA9" secondAttribute="bottom" constant="8" id="OIw-6H-i2V"/>
+                            <constraint firstItem="LlQ-AD-VYa" firstAttribute="top" secondItem="Ah4-XO-KyI" secondAttribute="bottom" constant="8" id="RCn-9Q-uL8"/>
+                            <constraint firstItem="3Jp-g0-lvh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p8n-TM-NE9" secondAttribute="trailing" constant="10" id="Ri6-re-2Ki"/>
+                            <constraint firstItem="Ah4-XO-KyI" firstAttribute="centerX" secondItem="LlQ-AD-VYa" secondAttribute="centerX" id="aAl-8w-FeW"/>
+                            <constraint firstAttribute="centerX" secondItem="LlQ-AD-VYa" secondAttribute="centerX" constant="-0.5" id="aFG-2B-EOj"/>
+                            <constraint firstItem="yap-lh-Nrs" firstAttribute="baseline" secondItem="fzV-N7-xq5" secondAttribute="baseline" constant="-1" id="dLn-cJ-ljX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A3c-tq-QWh" secondAttribute="trailing" id="eKT-rf-I6I"/>
+                            <constraint firstItem="3Jp-g0-lvh" firstAttribute="top" secondItem="fzV-N7-xq5" secondAttribute="bottom" constant="8" id="fqT-m1-lEy"/>
+                            <constraint firstItem="p8n-TM-NE9" firstAttribute="top" secondItem="yap-lh-Nrs" secondAttribute="bottom" constant="8" id="hpR-DG-Lqs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="LlQ-AD-VYa" secondAttribute="bottom" constant="20" id="oGV-vt-Uu4"/>
+                            <constraint firstItem="fzV-N7-xq5" firstAttribute="leading" secondItem="yap-lh-Nrs" secondAttribute="trailing" constant="8" id="rrq-TJ-Cts"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="y5f-75-rAG"/>
+                    <connections>
+                        <outlet property="imageView" destination="3Rm-fI-HA9" id="bNA-GB-hBe"/>
+                        <outlet property="scoreTextField" destination="yap-lh-Nrs" id="Q8v-IR-U0q"/>
+                        <outlet property="usernameLabel" destination="A3c-tq-QWh" id="T1G-TH-oKK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="273"/>
+        </scene>
+    </scenes>
+</document>
