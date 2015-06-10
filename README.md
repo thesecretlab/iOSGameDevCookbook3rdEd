@@ -2,9 +2,9 @@
 
 Code from [Secret Lab](http://www.secretlab.com.au)'s book, [iOS Game Development Cookbook Second Edition](http://shop.oreilly.com/product/0636920037170.do).
 
-The master branch is what's printed in the Second Edition, and is compatible with Xcode 6.3 and 6.4.
+The [master](https://github.com/thesecretlab/iOSGameDevCookbook2ndEd/tree/master) branch is what's printed in the Second Edition, and is compatible with Xcode 6.3 and 6.4 (iOS 8).
 
-The xcode-7 branch is updated for Swift 2. Read more information about it here.
+The [xcode-7](https://github.com/thesecretlab/iOSGameDevCookbook2ndEd/tree/xcode-7) branch is updated for Xcode 7 (iOS 9), and uses Swift 2. Read more about it in its [README file](https://github.com/thesecretlab/iOSGameDevCookbook2ndEd/blob/xcode-7/README.md).
 
 You can email us at [lab@secretlab.com.au](mailto:lab@secretlab.com.au)
 
