@@ -60,7 +60,7 @@ class Grid: NSObject {
         
         for (position, objects) in contents {
             
-            if find(objects, objectToFind) != nil {
+            if objects.index(of: objectToFind) != nil {
                 return position
             }
             
