@@ -17,32 +17,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let downUpGesture = DownUpGestureRecognizer(target:self, action:"downUp:")
+        let downUp = #selector(ViewController.downUp(downUpGesture:))
+        
+        let downUpGesture = DownUpGestureRecognizer(target:self, action:downUp)
         
         self.customGestureView.addGestureRecognizer(downUpGesture)
 
     }
     
-    func downUp(downUpGesture: DownUpGestureRecognizer) {
+    @objc func downUp(downUpGesture: DownUpGestureRecognizer) {
         
         switch downUpGesture.state {
-        case .Began:
+        case .began:
             self.customGestureStatusLabel.text = "Gesture began"
             
-        case .Changed:
+        case .changed:
             self.customGestureStatusLabel.text = "Gesture changed, phase = " +
             "\(downUpGesture.phase)"
             
-        case .Ended:
+        case .ended:
             self.customGestureStatusLabel.text = "Gesture ended"
             
-        case .Cancelled:
+        case .cancelled:
             self.customGestureStatusLabel.text = "Gesture cancelled"
             
-        case .Possible:
+        case .possible:
             self.customGestureStatusLabel.text = "Gesture possible"
             
-        case .Failed:
+        case .failed:
             self.customGestureStatusLabel.text = "Gesture failed"
             
             

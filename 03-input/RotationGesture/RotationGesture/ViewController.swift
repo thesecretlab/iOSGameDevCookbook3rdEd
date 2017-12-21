@@ -21,18 +21,20 @@ class ViewController: UIViewController {
     // and wrap around at 360 degrees
     var angleDegrees : Float {
         get {
-            return self.angle * 180.0 / Float(M_PI) % 360.0
+            return (self.angle * 180.0 / .pi).truncatingRemainder(dividingBy: 360)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rotated = #selector(ViewController.rotated(rotationGesture:))
+        
         // Set up the rotation gesture
         let rotationGesture = UIRotationGestureRecognizer(target: self,
-            action: "rotated:")
+                                                          action: rotated)
         
-        self.rotationView.userInteractionEnabled = true
+        self.rotationView.isUserInteractionEnabled = true
         self.rotationView.addGestureRecognizer(rotationGesture)
         
         self.rotationStatusLabel?.text = "\(self.angleDegrees)°"
@@ -40,17 +42,17 @@ class ViewController: UIViewController {
     
     // When the rotation changes, update self.angle
     // and use that to rotate the view
-    func rotated(rotationGesture : UIRotationGestureRecognizer) {
+    @objc func rotated(rotationGesture : UIRotationGestureRecognizer) {
         
         switch rotationGesture.state {
             
-        case .Changed:
+        case .changed:
             self.angle += Float(rotationGesture.rotation)
             
             rotationGesture.rotation = 0.0
             
             self.rotationView.transform =
-                CGAffineTransformMakeRotation(CGFloat(self.angle))
+                CGAffineTransform(rotationAngle: CGFloat(self.angle))
             
         default: () // do nothing
             

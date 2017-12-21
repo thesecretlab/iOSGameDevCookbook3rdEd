@@ -9,51 +9,53 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var draggedView: UIView!
     
     // BEGIN drag
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         // BEGIN interaction
-        self.draggedView.userInteractionEnabled = true
+        self.draggedView.isUserInteractionEnabled = true
         // END interaction
         
         // BEGIN setup
+        let dragged = #selector(ViewController.dragged(dragGesture:))
+        
         let drag = UIPanGestureRecognizer(target: self,
-            action: "dragged:")
+                                          action: dragged)
         self.draggedView.addGestureRecognizer(drag)
         // END setup
     }
     
     // BEGIN dragfunc
-    func dragged(dragGesture: UIPanGestureRecognizer) {
+    @objc func dragged(dragGesture: UIPanGestureRecognizer) {
         
-        if dragGesture.state == .Began ||
-            dragGesture.state == .Changed {
-                
-                var newPosition = dragGesture.translationInView(dragGesture.view!)
-                
-                newPosition.x += dragGesture.view!.center.x
-                newPosition.y += dragGesture.view!.center.y
-                
-                dragGesture.view!.center = newPosition
-                
-                dragGesture.setTranslation(CGPointZero,
-                    inView: dragGesture.view)
+        if dragGesture.state == .began ||
+            dragGesture.state == .changed {
+            
+            var newPosition = dragGesture.translation(in: dragGesture.view!)
+            
+            newPosition.x += dragGesture.view!.center.x
+            newPosition.y += dragGesture.view!.center.y
+            
+            dragGesture.view!.center = newPosition
+            
+            dragGesture.setTranslation(CGPoint.zero,
+                                       in: dragGesture.view)
         }
         
     }
     // END dragfunc
     // END drag
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

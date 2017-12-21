@@ -28,34 +28,43 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!,
         didUpdateLocations locations: [AnyObject]!) {
-        if regionToMonitor == nil {
-            
-            var location = locations.last as! CLLocation
-            
-            regionToMonitor = CLCircularRegion(center: location.coordinate,
-                radius: 20.0, identifier: "StartingPoint")
-
-            locationManager.startMonitoringForRegion(regionToMonitor)
-            
-            println("Now monitoring region \(regionToMonitor)")
-            
+        
+        // Only start monitoring a region when we first get
+        // a location
+        guard regionToMonitor == nil else {
+            return
         }
+    
+        let location = locations.last as! CLLocation
+        
+        let region = CLCircularRegion(center: location.coordinate,
+            radius: 20.0, identifier: "StartingPoint")
+
+        locationManager.startMonitoring(for: region)
+        
+        
+        print("Now monitoring region \(region)")
+        
+        regionToMonitor = region
+        
+        
     }
     
-    func locationManager(manager: CLLocationManager!,
-        monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
-        println("Failed to start monitoring region!")
+    func locationManager(_ manager: CLLocationManager,
+                         monitoringDidFailFor region: CLRegion?,
+                         withError error: Error) {
+        print("Failed to start monitoring region!")
 
     }
     
-    func locationManager(manager: CLLocationManager!,
-        didEnterRegion region: CLRegion!) {
-        println("Entering region!")
+    func locationManager(_ manager: CLLocationManager,
+                         didEnterRegion region: CLRegion) {
+        print("Entering region!")
     }
     
-    func locationManager(manager: CLLocationManager!,
-        didExitRegion region: CLRegion!) {
-        println("Exiting region!")
+    func locationManager(_ manager: CLLocationManager,
+                         didExitRegion region: CLRegion) {
+        print("Exiting region!")
     }
 
 

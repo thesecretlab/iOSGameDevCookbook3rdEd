@@ -13,29 +13,36 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var directionLabel : UILabel!
 
-    var motionManager = CMMotionManager()
     
     override func viewDidLoad() {
         
-        var mainQueue = NSOperationQueue.mainQueue()
+        let mainQueue = OperationQueue.main
         
-// BEGIN compass
+        // BEGIN compass
         
-motionManager.startDeviceMotionUpdatesUsingReferenceFrame(
-    CMAttitudeReferenceFrame.XTrueNorthZVertical,
-    toQueue: mainQueue) { (motion, error) in
-    var yaw = motion.attitude.yaw
-            
-    var yawDegrees = yaw * 180 / M_PI
-            
-    self.directionLabel.text = String(format:"Direction: %.0f°", yawDegrees)
-            
-}
-// END compass
+        motionManager.startDeviceMotionUpdates(
+            using: CMAttitudeReferenceFrame.xTrueNorthZVertical,
+            to: mainQueue) { (motion, error) in
+                
+                // Ensure that we have a CMDeviceMotion to work with
+                guard let motion = motion else {
+                    if let error = error {
+                        print("Failed to get motion: \(error)")
+                    }
+                    return
+                }
+                
+                let yaw = motion.attitude.yaw
+                
+                let yawDegrees = yaw * 180 / .pi
+                
+                self.directionLabel.text = String(format:"Direction: %.0f°", yawDegrees)
+                
+        }
+        // END compass
     }
     
-
-
+    var motionManager = CMMotionManager()
 
 }
 

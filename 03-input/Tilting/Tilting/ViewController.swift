@@ -19,19 +19,27 @@ class ViewController: UIViewController {
     var motionManager = CMMotionManager()
 
     override func viewDidLoad() {
-        var mainQueue = NSOperationQueue.mainQueue()
+        let mainQueue = OperationQueue.main
         
-        motionManager.startDeviceMotionUpdatesToQueue(mainQueue) {
+        motionManager.startDeviceMotionUpdates(to: mainQueue) {
             (motion, error) in
             
-            var roll = motion.attitude.roll
-            var rollDegrees = roll * 180 / M_PI
+            // Ensure that we have a CMDeviceMotion to work with
+            guard let motion = motion else {
+                if let error = error {
+                    print("Failed to get device motion: \(error)")
+                }
+                return
+            }
             
-            var yaw = motion.attitude.yaw
-            var yawDegrees = yaw * 180 / M_PI
+            let roll = motion.attitude.roll
+            let rollDegrees = roll * 180 / .pi
             
-            var pitch = motion.attitude.pitch
-            var pitchDegrees = pitch * 180 / M_PI
+            let yaw = motion.attitude.yaw
+            let yawDegrees = yaw * 180 / .pi
+            
+            let pitch = motion.attitude.pitch
+            let pitchDegrees = pitch * 180 / .pi
             
             self.rollLabel.text = String(format:"Roll: %.2f°", rollDegrees)
             self.yawLabel.text = String(format: "Yaw: %.2f°", yawDegrees)

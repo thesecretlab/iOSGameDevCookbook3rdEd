@@ -20,31 +20,39 @@ class ViewController: UIViewController {
 
 
     override func viewDidLoad() {
+        
+        
+        // BEGIN magnets
+        motionManager.startMagnetometerUpdates(to: OperationQueue.main) {
+            (magnetometerData, error) -> Void in
+            
+            // Ensure that we have a CMMagnetometerData to work with
+            guard let magnetometerData = magnetometerData else {
+                if let error = error {
+                    print("Failed to get magnetometer data: \(error)")
+                }
+                return
+            }
+            
+            let magneticField = magnetometerData.magneticField
+            
+            let xValue = String(format:"%.2f", magneticField.x)
+            let yValue = String(format:"%.2f", magneticField.y)
+            let zValue = String(format:"%.2f", magneticField.z)
+            
+            let average = (magneticField.x + magneticField.y + magneticField.z) / 3.0
+            
+            let averageValue = String(format:"%.2f", average)
+            
+            self.magneticFieldXLabel.text = xValue
+            self.magneticFieldYLabel.text = yValue
+            self.magneticFieldZLabel.text = zValue
+            self.magneticFieldAverageLabel.text = averageValue
+            
+        }
+        // END magnets
+        
         super.viewDidLoad()
-        
-// BEGIN magnets
-motionManager.startMagnetometerUpdatesToQueue(NSOperationQueue.mainQueue()) {
-    (magnetometerData, error) -> Void in
-            
-    let magneticField = magnetometerData.magneticField
-            
-    let xValue = String(format:"%.2f", magneticField.x)
-    let yValue = String(format:"%.2f", magneticField.y)
-    let zValue = String(format:"%.2f", magneticField.z)
-            
-    let average = (magneticField.x + magneticField.y + magneticField.z) / 3.0
-            
-    let averageValue = String(format:"%.2f", average)
-            
-    self.magneticFieldXLabel.text = xValue
-    self.magneticFieldYLabel.text = yValue
-    self.magneticFieldZLabel.text = zValue
-    self.magneticFieldAverageLabel.text = averageValue
-
-}
-// END magnets
-
-        
         
     }
 

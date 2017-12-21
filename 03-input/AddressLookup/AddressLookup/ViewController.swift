@@ -26,21 +26,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-// BEGIN lookup
-func locationManager(manager: CLLocationManager!,
-    didUpdateLocations locations: [AnyObject]!) {
-    let location = locations.last as! CLLocation
+    // BEGIN lookup
+    func locationManager(manager: CLLocationManager!,
+                         didUpdateLocations locations: [AnyObject]!) {
+        let location = locations.last as! CLLocation
         
-    geocoder.reverseGeocodeLocation(location, completionHandler: {
-        (placemarks, error) -> Void in
-        let addressString =
-            (placemarks.first as! CLPlacemark).name
+        geocoder.reverseGeocodeLocation(location, completionHandler: {
+            (placemarks, error) -> Void in
             
-        self.labelTextView.text = addressString
+            guard let placemark = placemarks?.first else {
+                if let error = error {
+                    print("Failed to get a placemark! \(error)")
+                }
+                return
+            }
             
-    })
-}
-// END lookup
+            let addressString = placemark.name
+            
+            self.labelTextView.text = addressString
+            
+        })
+    }
+    // END lookup
 
 }
 

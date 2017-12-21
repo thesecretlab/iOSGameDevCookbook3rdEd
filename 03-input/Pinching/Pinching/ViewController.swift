@@ -20,11 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let pinched = #selector(ViewController.pinched(pinchGesture:))
+        
         // Set up the rotation gesture
         let rotationGesture = UIPinchGestureRecognizer(target: self,
-            action: "pinched:")
+                                                       action: pinched)
         
-        self.scalingView.userInteractionEnabled = true
+        self.scalingView.isUserInteractionEnabled = true
         self.scalingView.addGestureRecognizer(rotationGesture)
         
         self.scalingStatusLabel?.text = "\(self.scale)x"
@@ -32,11 +34,11 @@ class ViewController: UIViewController {
     
     // When the rotation changes, update self.angle
     // and use that to rotate the view
-    func pinched(pinchGesture : UIPinchGestureRecognizer) {
+    @objc func pinched(pinchGesture : UIPinchGestureRecognizer) {
         
         switch pinchGesture.state {
             
-        case .Changed:
+        case .changed:
             self.scale *= Float(pinchGesture.scale)
             
             // BEGIN reset
@@ -44,8 +46,8 @@ class ViewController: UIViewController {
             // END reset
             
             self.scalingView.transform =
-                CGAffineTransformMakeScale(CGFloat(self.scale),
-                                           CGFloat(self.scale))
+                CGAffineTransform(scaleX: CGFloat(self.scale),
+                                  y: CGFloat(self.scale))
             
         default: () // do nothing
             

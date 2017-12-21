@@ -31,29 +31,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         // END begin_usage
         
-        self.locationErrorLabel.hidden = true
+        self.locationErrorLabel.isHidden = true
     }
     
     func locationManager(manager: CLLocationManager!,
         didUpdateLocations locations: [AnyObject]!) {
-        self.locationErrorLabel.hidden = true
+        self.locationErrorLabel.isHidden = true
         
         // BEGIN last
-        var location = locations.last as! CLLocation
+        let location = locations.last as! CLLocation
         // END last
         
         // BEGIN lat_lon
-        var latitude = location.coordinate.latitude
-        var longitude = location.coordinate.longitude
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
         // END lat_lon
         
         self.latitudeLabel.text = String(format: "Latitude: %.4f", latitude)
         self.longitudeLabel.text = String(format: "Longitude: %.4f", longitude)
     }
     
-    func locationManager(manager: CLLocationManager!,
-        didFailWithError error: NSError!) {
-        self.locationErrorLabel.hidden = false
+    func locationManager(_ manager: CLLocationManager,
+        didFailWithError error: Error) {
+        self.locationErrorLabel.isHidden = false
     }
 
 }

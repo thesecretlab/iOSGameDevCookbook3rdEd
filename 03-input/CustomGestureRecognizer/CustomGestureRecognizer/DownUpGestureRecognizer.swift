@@ -9,12 +9,14 @@
 import UIKit
 
 // BEGIN recognizer
+import UIKit.UIGestureRecognizerSubclass
+
 class DownUpGestureRecognizer: UIGestureRecognizer {
     
     // Represents the two phases that the gesture can be in:
     // moving down, or moving up after having moved down
-    enum DownUpGesturePhase : Printable {
-        case MovingDown, MovingUp
+    enum DownUpGesturePhase : CustomStringConvertible {
+        case movingDown, movingUp
         
         // The 'Printable' protocol above means that this type
         // can be turned into a string. 
@@ -24,94 +26,92 @@ class DownUpGestureRecognizer: UIGestureRecognizer {
         var description: String {
             get {
                 switch self {
-                case .MovingDown:
+                case .movingDown:
                     return "Moving Down"
-                case .MovingUp:
+                case .movingUp:
                     return "Moving Up"
                 }
             }
         }
     }
     
-    var phase : DownUpGesturePhase = .MovingDown
+    var phase : DownUpGesturePhase = .movingDown
     
-    override func touchesBegan(touches: Set<NSObject>,
-        withEvent event: UIEvent!) {
-            
-        self.phase = .MovingDown
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         
-        if self.numberOfTouches() > 1 {
+        self.phase = .movingDown
+        
+        if self.numberOfTouches > 1 {
             
             // If there's more than one touch, this is not the type of gesture
             // we're looking for, so fail immediately
-            self.state = .Failed
+            self.state = .failed
         } else {
             
             // Else, this touch could possible turn into a down-up gesture
-            self.state = .Possible
+            self.state = .possible
         }
     }
     
-    override func touchesMoved(touches: Set<NSObject>,
-        withEvent event:UIEvent) {
-            
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
+        
         // We know we only have one touch, beacuse touchesBegan will stop
         // recognizing when more than one touch is detected
-        let touch = touches.first! as! UITouch
+        guard let touch = touches.first else {
+            return
+        }
         
         // Get the current and previous position of the touch
-        let position = touch.locationInView(touch.view)
-        let lastPosition = touch.previousLocationInView(touch.view)
+        let position = touch.location(in: touch.view)
+        let lastPosition = touch.previousLocation(in: touch.view)
         
         // If the state is Possible, and the touch has moved down, the
         // gesture has Begun
-        if self.state == .Possible {
+        if self.state == .possible {
             if position.y > lastPosition.y {
-                self.state = .Began
+                self.state = .began
             }
         }
         
         // If the state is Began or Changed, and the touch has moved, the
         // gesture will change state
-        if self.state == .Began ||
-           self.state == .Changed {
+        if self.state == .began ||
+            self.state == .changed {
             
             // If the phase of the gesture is MovingDown, and the touch moved
             // down, the gesture has Changed
-            if self.phase == .MovingDown && position.y >
+            if self.phase == .movingDown && position.y >
                 lastPosition.y {
-                    self.state = .Changed
+                    self.state = .changed
             }
             // If the phase of the gesture is MovingDown, and the touch moved
             // up, the gesture has Changed also, change the phase to MovingUp
-            if self.phase == .MovingDown && position.y <
+            if self.phase == .movingDown && position.y <
                 lastPosition.y {
-                    self.phase = .MovingUp
-                    self.state = .Changed
+                    self.phase = .movingUp
+                    self.state = .changed
             }
             // If the phase of the gesture is MovingUp, and the touch moved
             // down, then the gesture has Failed
-            if self.phase == .MovingUp && position.y >
+            if self.phase == .movingUp && position.y >
                 lastPosition.y {
-                    self.state = .Failed
+                self.state = .failed
             }
             
         }
     }
     
-    override func touchesEnded(touches: Set<NSObject>,
-        withEvent event: UIEvent!) {
-            
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
         // We know that there's only one touch.
         
         // If the touch ends while the phase is MovingUp, the gesture has
         // Ended. If the touch ends while the phase is MovingDown, the gesture
         // has Failed.
         
-        if self.phase == .MovingDown {
-            self.state = .Failed
-        } else if self.phase == .MovingUp {
-            self.state = .Ended
+        if self.phase == .movingDown {
+            self.state = .failed
+        } else if self.phase == .movingUp {
+            self.state = .ended
         }
     }
    

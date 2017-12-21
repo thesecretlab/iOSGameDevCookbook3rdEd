@@ -15,15 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let tap = UITapGestureRecognizer(target: self,
-            action: "tapped:")
+                                         action: #selector(ViewController.tap(tapRecognizer:)))
         
         // In this case, we're adding it to the view controllers'
         // view, but you can add it to any view
         self.view.addGestureRecognizer(tap)
     }
     
-    func tap(tapRecognizer : UITapGestureRecognizer) {
-        if tapRecognizer.state == UIGestureRecognizerState.Ended {
+    @objc func tap(tapRecognizer : UITapGestureRecognizer) {
+        if tapRecognizer.state == UIGestureRecognizerState.ended {
             NSLog("View was tapped!")
         }
     }
