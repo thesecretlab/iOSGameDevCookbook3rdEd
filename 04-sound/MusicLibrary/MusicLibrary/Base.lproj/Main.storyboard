@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MusicLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Track Title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vK-7s-xy3">
+                                <rect key="frame" x="16" y="28" width="83" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgd-wY-z7H">
+                                <rect key="frame" x="107" y="28" width="477" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Artist:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fw-RK-GbY">
+                                <rect key="frame" x="54" y="56" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1N-NZ-93l">
+                                <rect key="frame" x="107" y="57" width="477" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="Album:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44W-Oz-6Hc">
+                                <rect key="frame" x="45" y="86" width="54" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="796-YU-Ggo">
+                                <rect key="frame" x="107" y="86" width="477" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHz-L5-jye">
+                                <rect key="frame" x="262" y="114" width="76" height="30"/>
+                                <state key="normal" title="Pick Media">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMediaPicker" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oEV-i0-PJF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="44W-Oz-6Hc" firstAttribute="top" secondItem="0Fw-RK-GbY" secondAttribute="bottom" constant="9" id="1Lo-vV-vr3"/>
+                            <constraint firstItem="vHz-L5-jye" firstAttribute="top" secondItem="44W-Oz-6Hc" secondAttribute="bottom" constant="7.5" id="4GV-Dm-SDb"/>
+                            <constraint firstItem="44W-Oz-6Hc" firstAttribute="baseline" secondItem="796-YU-Ggo" secondAttribute="baseline" constant="-0.5" id="8uf-qh-rRj"/>
+                            <constraint firstItem="796-YU-Ggo" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="AaR-oX-jZ8"/>
+                            <constraint firstItem="796-YU-Ggo" firstAttribute="leading" secondItem="44W-Oz-6Hc" secondAttribute="trailing" constant="8" id="Ath-gN-KSh"/>
+                            <constraint firstItem="0vK-7s-xy3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="IrO-Uh-9nU"/>
+                            <constraint firstItem="44W-Oz-6Hc" firstAttribute="trailing" secondItem="0Fw-RK-GbY" secondAttribute="trailing" id="JDX-bk-gXP"/>
+                            <constraint firstItem="K1N-NZ-93l" firstAttribute="baseline" secondItem="0Fw-RK-GbY" secondAttribute="baseline" constant="1.5" id="MsB-MK-IuP"/>
+                            <constraint firstItem="0vK-7s-xy3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="OtF-4C-cdc"/>
+                            <constraint firstItem="K1N-NZ-93l" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="QVi-IW-Ad6"/>
+                            <constraint firstAttribute="centerX" secondItem="vHz-L5-jye" secondAttribute="centerX" id="YNV-1L-rrR"/>
+                            <constraint firstItem="pgd-wY-z7H" firstAttribute="baseline" secondItem="0vK-7s-xy3" secondAttribute="baseline" constant="0.5" id="cRk-HG-Pqc"/>
+                            <constraint firstItem="0Fw-RK-GbY" firstAttribute="top" secondItem="0vK-7s-xy3" secondAttribute="bottom" constant="8" id="hCd-A3-gwg"/>
+                            <constraint firstItem="pgd-wY-z7H" firstAttribute="leading" secondItem="0vK-7s-xy3" secondAttribute="trailing" constant="8" id="j8X-xn-ffX"/>
+                            <constraint firstItem="0vK-7s-xy3" firstAttribute="trailing" secondItem="0Fw-RK-GbY" secondAttribute="trailing" id="o1j-EK-DWY"/>
+                            <constraint firstItem="K1N-NZ-93l" firstAttribute="leading" secondItem="0Fw-RK-GbY" secondAttribute="trailing" constant="8" id="odt-Js-yJ1"/>
+                            <constraint firstItem="pgd-wY-z7H" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vGn-NV-UOb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumLabel" destination="796-YU-Ggo" id="ajF-1l-4dh"/>
+                        <outlet property="artistLabel" destination="K1N-NZ-93l" id="Ly4-t1-per"/>
+                        <outlet property="titleLabel" destination="pgd-wY-z7H" id="K86-Dz-dIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
