@@ -13,7 +13,7 @@
 		6810D1E51A8074BF00CBD077 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6810D1E41A8074BF00CBD077 /* Images.xcassets */; };
 		6810D1E81A8074BF00CBD077 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6810D1E61A8074BF00CBD077 /* LaunchScreen.xib */; };
 		6810D1F41A8074BF00CBD077 /* SimpleAudioPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6810D1F31A8074BF00CBD077 /* SimpleAudioPlayerTests.swift */; };
-		6810D1FF1A80751500CBD077 /* TestSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6810D1FE1A80751500CBD077 /* TestSound.wav */; };
+		682B03441FEBDFB800E5FE1C /* TestSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 682B03431FEBDFB800E5FE1C /* TestSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		6810D1ED1A8074BF00CBD077 /* SimpleAudioPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAudioPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6810D1F21A8074BF00CBD077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6810D1F31A8074BF00CBD077 /* SimpleAudioPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAudioPlayerTests.swift; sourceTree = "<group>"; };
-		6810D1FE1A80751500CBD077 /* TestSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = TestSound.wav; path = "../../../objective-c/sound/Sounds/TestSound.wav"; sourceTree = "<group>"; };
+		682B03431FEBDFB800E5FE1C /* TestSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = TestSound.wav; path = ../Sounds/TestSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 		6810D1FD1A80750F00CBD077 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				6810D1FE1A80751500CBD077 /* TestSound.wav */,
+				682B03431FEBDFB800E5FE1C /* TestSound.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 		6810D1D01A8074BF00CBD077 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Secret Lab";
 				TargetAttributes = {
 					6810D1D71A8074BF00CBD077 = {
@@ -205,7 +205,7 @@
 			files = (
 				6810D1E31A8074BF00CBD077 /* Main.storyboard in Resources */,
 				6810D1E81A8074BF00CBD077 /* LaunchScreen.xib in Resources */,
-				6810D1FF1A80751500CBD077 /* TestSound.wav in Resources */,
+				682B03441FEBDFB800E5FE1C /* TestSound.wav in Resources */,
 				6810D1E51A8074BF00CBD077 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,20 +275,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -306,6 +316,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -317,13 +328,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -331,6 +350,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -340,6 +360,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -350,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SimpleAudioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -360,6 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SimpleAudioPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -378,6 +402,7 @@
 				);
 				INFOPLIST_FILE = SimpleAudioPlayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleAudioPlayer.app/SimpleAudioPlayer";
 			};
@@ -393,6 +418,7 @@
 				);
 				INFOPLIST_FILE = SimpleAudioPlayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimpleAudioPlayer.app/SimpleAudioPlayer";
 			};
@@ -417,6 +443,7 @@
 				6810D1F91A8074BF00CBD077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6810D1FA1A8074BF00CBD077 /* Build configuration list for PBXNativeTarget "SimpleAudioPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +452,7 @@
 				6810D1FC1A8074BF00CBD077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

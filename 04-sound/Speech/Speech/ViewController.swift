@@ -23,9 +23,9 @@ class ViewController: UIViewController {
 
         // BEGIN stop
         // Stop speaking immediately
-        self.speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Immediate)
+        self.speechSynthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
         // Stop speaking after the current word
-        self.speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Word)
+        self.speechSynthesizer.pauseSpeaking(at: AVSpeechBoundary.word)
         // END stop
         
         // Continuing speech:
@@ -36,13 +36,14 @@ class ViewController: UIViewController {
         */
         
         // Generate a new utterance from a string
+        let textToSpeak = self.textToSpeakField.text ?? ""
         // BEGIN utterance
-        let utterance = AVSpeechUtterance(string:self.textToSpeakField.text)
+        let utterance = AVSpeechUtterance(string: textToSpeak)
         // END utterance
         
         // Speak the utterance
         // BEGIN speak
-        self.speechSynthesizer.speakUtterance(utterance)
+        self.speechSynthesizer.speak(utterance)
         // END speak
     }
     

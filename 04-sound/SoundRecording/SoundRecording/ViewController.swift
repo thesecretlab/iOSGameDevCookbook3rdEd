@@ -14,60 +14,59 @@ class ViewController: UIViewController {
     
     var audioRecorder : AVAudioRecorder?
     var audioPlayer : AVAudioPlayer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var destinationURL = self.audioRecordingURL()
+        let destinationURL = self.audioRecordingURL
         
-// BEGIN setup
-// destinationURL is the location of where we want to store our recording
-var error : NSError?
+        // BEGIN setup
+        // destinationURL is the location of where we want to store our recording
         
-audioRecorder = AVAudioRecorder(URL:destinationURL, settings:nil, error:&error)
+        do {
+            audioRecorder = try AVAudioRecorder(url:destinationURL, settings: [:])
+        } catch let error {
+            print("Couldn't create a recorder: \(error)")
+        }
         
-if (error != nil) {
-    println("Couldn't create a recorder: \(error)")
-}
+        audioRecorder?.prepareToRecord()
+        // END setup
         
-audioRecorder?.prepareToRecord()
-// END setup
-
-    }
-
-    func audioRecordingURL() -> NSURL {
-// BEGIN documents_url
-let documentsURL = NSFileManager.defaultManager()
-    .URLsForDirectory(NSSearchPathDirectory.DocumentDirectory,
-        inDomains:NSSearchPathDomainMask.UserDomainMask).last as! NSURL
-// END documents_url
-        
-// BEGIN filename
-return documentsURL.URLByAppendingPathComponent("RecordedSound.wav")
-// END filename
-
     }
     
-
+    var audioRecordingURL : URL {
+        // BEGIN documents_url
+        let documentsURL = FileManager.default
+            .urls(for: FileManager.SearchPathDirectory.documentDirectory,
+                  in:FileManager.SearchPathDomainMask.userDomainMask).last!
+        // END documents_url
+        
+        // BEGIN filename
+        return documentsURL.appendingPathComponent("RecordedSound.wav")
+        // END filename
+        
+    }
+    
+    
     @IBAction func startRecording(sender : UIButton) {
         
-        if (audioRecorder?.recording == true) {
-// BEGIN stop
-audioRecorder?.stop()
-// END stop
-            sender.setTitle("Start Recording", forState:UIControlState.Normal)
+        if (audioRecorder?.isRecording == true) {
+            // BEGIN stop
+            audioRecorder?.stop()
+            // END stop
+            sender.setTitle("Start Recording", for:UIControlState.normal)
         } else {
-// BEGIN record
-audioRecorder?.record()
-// END record
-            sender.setTitle("Stop Recording", forState:UIControlState.Normal)
+            // BEGIN record
+            audioRecorder?.record()
+            // END record
+            sender.setTitle("Stop Recording", for:UIControlState.normal)
         }
-
+        
     }
     
     @IBAction func playRecording(sender : UIButton) {
-        audioPlayer = AVAudioPlayer(contentsOfURL:self.audioRecordingURL(), error:nil)
+        audioPlayer = try? AVAudioPlayer(contentsOf:self.audioRecordingURL)
         
         audioPlayer?.play()
         
@@ -75,5 +74,5 @@ audioRecorder?.record()
     
     
 }
-            
-           
+
+

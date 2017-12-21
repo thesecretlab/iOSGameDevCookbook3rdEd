@@ -17,31 +17,31 @@ private var players : [AVAudioPlayer] = []
 class AVAudioPlayerPool: NSObject {
    
     // Given the URL of a sound file, either create or reuse an audio player
-    class func playerWithURL(url : NSURL) -> AVAudioPlayer? {
+    class func player(url : URL) -> AVAudioPlayer? {
 
         // Try and find a player that can be reused and is not playing
         let availablePlayers = players.filter { (player) -> Bool in
-            return player.playing == false && player.url == url
+            return player.isPlaying == false && player.url == url
         }
         
         // If we found one, return it
         if let playerToUse = availablePlayers.first {
-            println("Reusing player for \(url.lastPathComponent)")
+            print("Reusing player for \(url.lastPathComponent)")
             return playerToUse
         }
         
         // Didn't find one? Create a new one
-        var error : NSError? = nil
-        if let newPlayer = AVAudioPlayer(contentsOfURL:url, error:&error) {
-            println("Creating new player for url \(url.lastPathComponent)")
+        
+        do {
+            let newPlayer = try AVAudioPlayer(contentsOf: url)
             players.append(newPlayer)
             return newPlayer
-        } else {
-            // We might not be able to create one, so log and return nil
-            println("Couldn't load \(url.lastPathComponent): \(error)")
+        } catch let error {
+            print("Couldn't load \(url.lastPathComponent): \(error)")
             return nil
-
         }
+        
+        
     }
     
 }

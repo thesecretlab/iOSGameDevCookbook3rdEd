@@ -12,29 +12,29 @@ class ViewController: UIViewController {
     
     @IBAction func playSound1(sender : AnyObject) {
         
-// BEGIN usage
-if let url = NSBundle.mainBundle().URLForResource("TestSound",
-    withExtension: "wav") {
-    let player = AVAudioPlayerPool.playerWithURL(url)
-    player?.play()
-}
-// END usage
-
+        // BEGIN usage
+        if let url = Bundle.main.url(forResource: "TestSound",
+                                                          withExtension: "wav") {
+            let player = AVAudioPlayerPool.player(url: url)
+            player?.play()
+        }
+        // END usage
+        
     }
     
     @IBAction func playSound2(sender : AnyObject) {
-        if let url = NSBundle.mainBundle().URLForResource("ReceiveMessage", withExtension: "aif") {
-            let player = AVAudioPlayerPool.playerWithURL(url)
+        if let url = Bundle.main.url(forResource: "ReceiveMessage", withExtension: "aif") {
+            let player = AVAudioPlayerPool.player(url: url)
             player?.play()
         }
     }
     
     @IBAction func playSound3(sender : AnyObject) {
-        if let url = NSBundle.mainBundle().URLForResource("SendMessage", withExtension: "aif") {
-            let player = AVAudioPlayerPool.playerWithURL(url)
+        if let url = Bundle.main.url(forResource: "SendMessage", withExtension: "aif") {
+            let player = AVAudioPlayerPool.player(url: url)
             player?.play()
         }
     }
-
+    
 }
 
