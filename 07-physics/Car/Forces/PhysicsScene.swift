@@ -18,23 +18,22 @@ class PhysicsScene: SKScene {
         wallsNode.position = CGPoint(x: self.frame.midX,
             y: self.frame.midY)
         
-        let rect = CGRectOffset(self.frame,
-            -self.frame.width / 2.0, -self.frame.height / 2.0)
-        wallsNode.physicsBody = SKPhysicsBody(edgeLoopFromRect:rect)
+        let rect = self.frame.offsetBy(dx: -self.frame.width / 2.0, dy: -self.frame.height / 2.0)
+        wallsNode.physicsBody = SKPhysicsBody(edgeLoopFrom:rect)
         
         self.addChild(wallsNode)
         
-        let car = self.createCar()
+        _ = self.createCar()
         
     }
     
 // BEGIN car
-func createWheel(wheelRadius: CGFloat) -> SKShapeNode {
-    let wheelRect = CGRect(x: -wheelRadius, y: -wheelRadius,
-        width: wheelRadius*2, height: wheelRadius*2)
+func createWheel(radius: CGFloat) -> SKShapeNode {
+    let wheelRect = CGRect(x: -radius, y: -radius,
+        width: radius*2, height: radius*2)
         
     let wheelNode = SKShapeNode()
-    wheelNode.path = UIBezierPath(ovalInRect: wheelRect).CGPath
+    wheelNode.path = UIBezierPath(ovalIn: wheelRect).cgPath
         
     return wheelNode
 }
@@ -42,22 +41,26 @@ func createWheel(wheelRadius: CGFloat) -> SKShapeNode {
 func createCar() -> SKNode {
         
     // Create the car
-    let carNode = SKSpriteNode(color:SKColor.yellowColor(),
+    let carNode = SKSpriteNode(color:SKColor.yellow,
         size:CGSize(width: 150, height: 50))
-    carNode.physicsBody = SKPhysicsBody(rectangleOfSize:carNode.size)
+    let carPhysicsBody = SKPhysicsBody(rectangleOf:carNode.size)
+    carNode.physicsBody = carPhysicsBody
+    
     carNode.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
     self.addChild(carNode)
         
     // Create the left wheel
-    let leftWheelNode = self.createWheel(30)
-    leftWheelNode.physicsBody = SKPhysicsBody(circleOfRadius:30)
+    let leftWheelNode = self.createWheel(radius: 30)
+    let leftWheelPhysicsBody = SKPhysicsBody(circleOfRadius:30)
+    leftWheelNode.physicsBody = leftWheelPhysicsBody
     leftWheelNode.position = CGPoint(x: carNode.position.x-80,
         y: carNode.position.y)
     self.addChild(leftWheelNode)
         
     // Create the right wheel
-    let rightWheelNode = self.createWheel(30)
-    rightWheelNode.physicsBody = SKPhysicsBody(circleOfRadius:30)
+    let rightWheelNode = self.createWheel(radius: 30)
+    let rightWheelPhysicsBody = SKPhysicsBody(circleOfRadius:30)
+    rightWheelNode.physicsBody = rightWheelPhysicsBody
     rightWheelNode.position = CGPoint(x: carNode.position.x+80,
         y: carNode.position.y)
     self.addChild(rightWheelNode)
@@ -66,13 +69,13 @@ func createCar() -> SKNode {
     let leftWheelPosition = leftWheelNode.position
     let rightWheelPosition = rightWheelNode.position
         
-    let leftPinJoint = SKPhysicsJointPin.jointWithBodyA(carNode.physicsBody,
-        bodyB:leftWheelNode.physicsBody, anchor:leftWheelPosition)
-    let rightPinJoint = SKPhysicsJointPin.jointWithBodyA(carNode.physicsBody,
-        bodyB:rightWheelNode.physicsBody, anchor:rightWheelPosition)
+    let leftPinJoint = SKPhysicsJointPin.joint(withBodyA: carPhysicsBody,
+        bodyB:leftWheelPhysicsBody, anchor:leftWheelPosition)
+    let rightPinJoint = SKPhysicsJointPin.joint(withBodyA: carPhysicsBody,
+        bodyB:rightWheelPhysicsBody, anchor:rightWheelPosition)
         
-    self.physicsWorld.addJoint(leftPinJoint)
-    self.physicsWorld.addJoint(rightPinJoint)
+    self.physicsWorld.add(leftPinJoint)
+    self.physicsWorld.add(rightPinJoint)
         
     return carNode
 }

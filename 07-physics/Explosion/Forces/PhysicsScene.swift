@@ -17,10 +17,10 @@ class PhysicsScene: SKScene {
         
         // Add 50 small boxes
         
-        for i in 0...50 {
-            let node = SKSpriteNode(color:SKColor.whiteColor(), size:CGSize(width: 20, height: 20))
+        for _ in 0...50 {
+            let node = SKSpriteNode(color:SKColor.white, size:CGSize(width: 20, height: 20))
             node.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-            node.physicsBody = SKPhysicsBody(rectangleOfSize:node.size)
+            node.physicsBody = SKPhysicsBody(rectangleOf:node.size)
             node.physicsBody?.density = 0.01
             
             self.addChild(node)
@@ -28,25 +28,25 @@ class PhysicsScene: SKScene {
         
         // Add the walls
         let walls = SKNode()
-        walls.physicsBody = SKPhysicsBody(edgeLoopFromRect:self.frame)
+        walls.physicsBody = SKPhysicsBody(edgeLoopFrom:self.frame)
         self.addChild(walls)
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        for touch in touches as! Set<UITouch> {
-            let point = touch.locationInNode(self)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let point = touch.location(in: self)
         
             
             // BEGIN create_explosion
             // 'point' is a CGPoint in world space
-            self.applyExplosionAtPoint(point, radius:150, power:10)
+            self.applyExplosion(at: point, radius:150, power:10)
             // END create_explosion
         }
     }
     
     
 // BEGIN apply_explosion
-func applyExplosionAtPoint(point: CGPoint,
+func applyExplosion(at point: CGPoint,
     radius:CGFloat, power:CGFloat) {
     
     // Work out which bodies are in range of the explosion
@@ -56,8 +56,8 @@ func applyExplosionAtPoint(point: CGPoint,
         width: radius*2, height: radius*2)
         
     // For each body, apply an explosion force
-    self.physicsWorld.enumerateBodiesInRect(explosionRect,
-        usingBlock:{ (body, stop) in
+    self.physicsWorld.enumerateBodies(in: explosionRect,
+                                      using:{ (body, stop) in
 
         // Work out if the body has a node that we can use
         if let bodyPosition = body.node?.position {

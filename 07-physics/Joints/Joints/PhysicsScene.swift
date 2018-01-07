@@ -9,7 +9,7 @@
 import SpriteKit
 
 class PhysicsScene: SKScene {
-
+    
     override init(size: CGSize) {
         super.init(size: size)
         
@@ -17,39 +17,45 @@ class PhysicsScene: SKScene {
         
         let scene = self
         
-// BEGIN joints
-let anchor = SKSpriteNode(color:SKColor.whiteColor(),
-    size:CGSize(width: 100, height: 100))
-anchor.position = CGPointMake(self.frame.midX, self.frame.midY)
-anchor.physicsBody = SKPhysicsBody(rectangleOfSize:anchor.size)
-anchor.physicsBody?.dynamic = false
+        // BEGIN joints
         
-scene.addChild(anchor)
+        let anchor = SKSpriteNode(color:SKColor.white,
+                                  size:CGSize(width: 100, height: 100))
+        anchor.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         
-let attachment = SKSpriteNode(color:SKColor.yellowColor(),
-    size:CGSize(width: 100, height: 100))
-attachment.position = CGPointMake(self.frame.midX + 100,
-    self.frame.midY - 100)
-attachment.physicsBody = SKPhysicsBody(rectangleOfSize:attachment.size)
+        let anchorBody = SKPhysicsBody(rectangleOf:anchor.size)
+        anchor.physicsBody = anchorBody
+        anchor.physicsBody?.isDynamic = false
         
-scene.addChild(attachment)
+        scene.addChild(anchor)
         
-let pinJoint = SKPhysicsJointPin.jointWithBodyA(anchor.physicsBody,
-    bodyB:attachment.physicsBody, anchor:anchor.position)
+        let attachment = SKSpriteNode(color:SKColor.yellow,
+                                      size:CGSize(width: 100, height: 100))
+        attachment.position = CGPoint(x: self.frame.midX + 100,
+                                      y :self.frame.midY - 100)
         
-// BEGIN add_joint
-scene.physicsWorld.addJoint(pinJoint)
-// END add_joint
-// END joints
-
-/*
-// Removing joints
-// BEGIN remove_joint
-scene.physicsWorld.removeJoint(pinJoint)
-// END remove_joint
-*/
+        let attachmentBody = SKPhysicsBody(rectangleOf:attachment.size)
+        attachment.physicsBody = attachmentBody
         
-
+        scene.addChild(attachment)
+        
+        let pinJoint = SKPhysicsJointPin.joint(withBodyA: anchorBody,
+                                               bodyB:attachmentBody,
+                                               anchor:anchor.position)
+        
+        // BEGIN add_joint
+        scene.physicsWorld.add(pinJoint)
+        // END add_joint
+        // END joints
+        
+        /*
+         // Removing joints
+         // BEGIN remove_joint
+         scene.physicsWorld.removeJoint(pinJoint)
+         // END remove_joint
+         */
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
