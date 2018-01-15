@@ -32,6 +32,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // END begin_usage
         
         self.locationErrorLabel.isHidden = true
+        
+        // BEGIN location_onetime
+        locationManager.requestLocation()
+        // END location_onetime
     }
     
     func locationManager(manager: CLLocationManager!,

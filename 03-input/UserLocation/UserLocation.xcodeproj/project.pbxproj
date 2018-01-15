@@ -161,6 +161,7 @@
 				TargetAttributes = {
 					6867158A1A7F2ACD008D00BE = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5V2A4389PA;
 					};
 					6867159F1A7F2ACD008D00BE = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -358,9 +359,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				INFOPLIST_FILE = UserLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.secretlab.training.UserLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -369,9 +372,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				INFOPLIST_FILE = UserLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.secretlab.training.UserLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

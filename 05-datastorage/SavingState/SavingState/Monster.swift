@@ -9,7 +9,7 @@
 import UIKit
 
 // BEGIN coding
-class Monster: NSObject, NSCoding {
+class Monster: Codable {
     
    
     // Game data

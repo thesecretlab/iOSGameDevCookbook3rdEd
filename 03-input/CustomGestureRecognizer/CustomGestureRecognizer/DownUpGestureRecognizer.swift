@@ -18,10 +18,10 @@ class DownUpGestureRecognizer: UIGestureRecognizer {
     enum DownUpGesturePhase : CustomStringConvertible {
         case movingDown, movingUp
         
-        // The 'Printable' protocol above means that this type
-        // can be turned into a string. 
+        // The 'CustomStringConvertible' protocol above means
+        // that this type can be turned into a string.
         // This means you can say "\(somePhase)" and it will
-        // turn into the right string
+        // turn into the correct string.
         // The following property adds support for this.
         var description: String {
             get {
@@ -39,6 +39,7 @@ class DownUpGestureRecognizer: UIGestureRecognizer {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         
+        // The gesture begins in the moving down phase.
         self.phase = .movingDown
         
         if self.numberOfTouches > 1 {
@@ -67,15 +68,13 @@ class DownUpGestureRecognizer: UIGestureRecognizer {
         
         // If the state is Possible, and the touch has moved down, the
         // gesture has Begun
-        if self.state == .possible {
-            if position.y > lastPosition.y {
-                self.state = .began
-            }
+        if self.state == .possible && position.y > lastPosition.y {
+            self.state = .began
         }
         
         // If the state is Began or Changed, and the touch has moved, the
         // gesture will change state
-        if self.state == .began ||
+        else if self.state == .began ||
             self.state == .changed {
             
             // If the phase of the gesture is MovingDown, and the touch moved
@@ -86,14 +85,14 @@ class DownUpGestureRecognizer: UIGestureRecognizer {
             }
             // If the phase of the gesture is MovingDown, and the touch moved
             // up, the gesture has Changed also, change the phase to MovingUp
-            if self.phase == .movingDown && position.y <
+            else if self.phase == .movingDown && position.y <
                 lastPosition.y {
                     self.phase = .movingUp
                     self.state = .changed
             }
             // If the phase of the gesture is MovingUp, and the touch moved
             // down, then the gesture has Failed
-            if self.phase == .movingUp && position.y >
+            else if self.phase == .movingUp && position.y >
                 lastPosition.y {
                 self.state = .failed
             }
@@ -102,15 +101,15 @@ class DownUpGestureRecognizer: UIGestureRecognizer {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
-        // We know that there's only one touch.
         
-        // If the touch ends while the phase is MovingUp, the gesture has
-        // Ended. If the touch ends while the phase is MovingDown, the gesture
+        // If the touch ends while the phase is MovingDown, the gesture
         // has Failed.
-        
         if self.phase == .movingDown {
             self.state = .failed
-        } else if self.phase == .movingUp {
+        }
+        // If the touch ends while the phase is MovingUp, the gesture has
+        // Ended.
+        else if self.phase == .movingUp {
             self.state = .ended
         }
     }

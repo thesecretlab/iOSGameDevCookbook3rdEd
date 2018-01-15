@@ -31,9 +31,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vw2-4R-UdF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="8TV-5N-5k4"/>
-                            <constraint firstItem="Vw2-4R-UdF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Qea-e8-X7L"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Vw2-4R-UdF" secondAttribute="trailingMargin" id="YRj-Bv-KPo"/>
+                            <constraint firstItem="Vw2-4R-UdF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Gc9-le-uvW"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Vw2-4R-UdF" secondAttribute="trailing" constant="20" id="lRI-iq-fkK"/>
+                            <constraint firstItem="Vw2-4R-UdF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="qCe-uv-vev"/>
                         </constraints>
                     </view>
                 </viewController>
