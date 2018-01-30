@@ -176,7 +176,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func levelStepperValueChanged(sender: UIStepper) {
+    @IBAction func levelStepperValueChanged(_ sender: UIStepper) {
         self.levelNumber = Int(sender.value)
         updateLevelDisplay(levelNumber: self.levelNumber)
     }
@@ -210,8 +210,12 @@ class ViewController: UIViewController {
     }
     
     func updateLevelDisplay(levelNumber : Int) {
-        self.levelStepper.value = Double(levelNumber)
-        self.levelLabel.text = String(levelNumber)
+        // Ensure that we're working with the UI elements
+        // on the main queue only
+        OperationQueue.main.addOperation {
+            self.levelStepper.value = Double(levelNumber)
+            self.levelLabel.text = String(levelNumber)
+        }
     }
     
     // Someone else changed the value on us, so update the

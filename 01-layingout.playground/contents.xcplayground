@@ -3,6 +3,7 @@
     <pages>
         <page name='Inheritance-Based Layout'/>
         <page name='Component-Based Layout'/>
+        <page name='Component-Based Layout with GameplayKit'/>
         <page name='Calculating Delta Times'/>
         <page name='Entering and Exiting'/>
         <page name='Timers'/>
@@ -12,5 +13,9 @@
         <page name='Working with Closures'/>
         <page name='Operation Queues'/>
         <page name='Filtering Arrays with Closures'/>
+        <page name='Tests and Assertions'/>
+        <page name='Using State Machines - UNFINISHED'/>
+        <page name='Randomisation'/>
+        <page name='Graphs'/>
     </pages>
 </playground>

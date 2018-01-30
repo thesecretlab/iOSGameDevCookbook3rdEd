@@ -161,6 +161,7 @@
 				TargetAttributes = {
 					683DC8B41A661AF100A4B9F5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5V2A4389PA;
 					};
 					683DC8C91A661AF100A4B9F5 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -358,9 +359,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				INFOPLIST_FILE = Constraints/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.secretlab.training.Constraints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -369,9 +371,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				INFOPLIST_FILE = Constraints/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.secretlab.training.Constraints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
