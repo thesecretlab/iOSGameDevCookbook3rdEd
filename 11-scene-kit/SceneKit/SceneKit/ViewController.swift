@@ -9,7 +9,10 @@
 import UIKit
 import SceneKit
 import QuartzCore
+
+// BEGIN scn_import_scenekit
 import SpriteKit
+// END scn_import_scenekit
 
 class ViewController: UIViewController {
     

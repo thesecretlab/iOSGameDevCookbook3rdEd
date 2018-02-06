@@ -11,18 +11,24 @@ import UIKit
 class ViewController: UIViewController {
     
     // BEGIN feedback_impact
-    let lightImpact = UIImpactFeedbackGenerator(style: .light)
-    let mediumImpact = UIImpactFeedbackGenerator(style: .medium)
-    let heavyImpact = UIImpactFeedbackGenerator(style: .heavy)
+        // Prepare 'impact' feedback generators with the
+        // style of feedback you want
+        let lightImpact = UIImpactFeedbackGenerator(style: .light)
+        let mediumImpact = UIImpactFeedbackGenerator(style: .medium)
+        let heavyImpact = UIImpactFeedbackGenerator(style: .heavy)
     
     // END feedback_impact
     
     // BEGIN feedback_notification
-    let notification = UINotificationFeedbackGenerator()
+        // Prepare a 'notification' feedback generator
+        let notification = UINotificationFeedbackGenerator()
+    
     // END feedback_notification
     
     // BEGIN feedback_selection
-    let selection = UISelectionFeedbackGenerator()
+        // Prepare a 'selection changed' feedback generator
+        let selection = UISelectionFeedbackGenerator()
+    
     // END feedback_selection
     
     override func viewDidLoad() {
@@ -45,6 +51,7 @@ class ViewController: UIViewController {
         // BEGIN feedback_impact
         // Play a 'light impact' notification
         lightImpact.impactOccurred()
+        
         // END feedback_impact
     }
     
@@ -52,6 +59,7 @@ class ViewController: UIViewController {
         // BEGIN feedback_impact
         // Play a 'medium impact' notification
         mediumImpact.impactOccurred()
+        
         // END feedback_impact
     }
     
@@ -59,6 +67,7 @@ class ViewController: UIViewController {
         // BEGIN feedback_impact
         // Play a 'heavy impact' notification
         heavyImpact.impactOccurred()
+        
         // END feedback_impact
     }
     
@@ -66,24 +75,28 @@ class ViewController: UIViewController {
         
         // BEGIN feedback_notification
         notification.notificationOccurred(.warning)
+        
         // END feedback_notification
         
     }
     @IBAction func successNotification(_ sender: Any) {
         // BEGIN feedback_notification
         notification.notificationOccurred(.success)
+        
         // END feedback_notification
     }
     
     @IBAction func errorNotification(_ sender: Any) {
         // BEGIN feedback_notification
         notification.notificationOccurred(.error)
+        
         // END feedback_notification
     }
     
     @IBAction func prepareNotification(_ sender: Any) {
         // BEGIN feedback_prepare
         heavyImpact.prepare()
+        
         // END feedback_prepare
     }
     
@@ -95,6 +108,7 @@ class ViewController: UIViewController {
         // will be delivered more quickly if the Taptic Engine
         // was already in the prepared state.
         heavyImpact.impactOccurred()
+        
         // END feedback_prepare_deliver
     }
 }
