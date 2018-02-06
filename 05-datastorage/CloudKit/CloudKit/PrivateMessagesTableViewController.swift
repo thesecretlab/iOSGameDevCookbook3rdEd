@@ -12,7 +12,12 @@ import CloudKit
 class PrivateMessagesTableViewController: MessagesTableViewController {
 
     override var database: CKDatabase {
-        return CKContainer.default().privateCloudDatabase
+        
+        // BEGIN ck_database_private
+        let database = CKContainer.default().privateCloudDatabase
+        // END ck_database_private
+        
+        return database
     }
 
 }

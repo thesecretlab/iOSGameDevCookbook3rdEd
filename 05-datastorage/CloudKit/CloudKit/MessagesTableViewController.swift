@@ -11,18 +11,25 @@ import CloudKit
 
 // Use an enum for record keys rather than strings
 // for better type-checking
+// BEGIN ck_record_defs
 enum NoteRecordKey : String {
     case contents
 }
 
 let NoteRecordType = "Note"
+// END ck_record_defs
 
 class MessagesTableViewController: UITableViewController {
     
     @IBOutlet weak var addButton: UIBarButtonItem!
     
     var database : CKDatabase {
-        return CKContainer.default().publicCloudDatabase
+        
+        // BEGIN ck_database_public
+        let database = CKContainer.default().publicCloudDatabase
+        // END ck_database_public
+        
+        return database
     }
     
     @IBAction func addMessage(_ sender: Any) {
@@ -57,8 +64,8 @@ class MessagesTableViewController: UITableViewController {
         
     }
     
+    // BEGIN ck_addrecord
     func saveNewMessage(text: String) {
-        
         
         let record = CKRecord(recordType: NoteRecordType)
         
@@ -69,17 +76,22 @@ class MessagesTableViewController: UITableViewController {
             if let record = record {
                 print("Successfully saved record \(record.recordID)")
                 
+                // Indicate to the user that it's saved
+                
+                // BEGIN ck_addrecord_table
                 // Immediately add this record to the top of the list, which is where it would be if we'd done a full refresh
                 OperationQueue.main.addOperation {
                     self.records.insert(record, at: 0)
                     self.tableView.reloadData()
                 }
+                // END ck_addrecord_table
                 
             } else if let error = error {
                 print("Error saving record: \(error)")
             }
         })
     }
+    // END ck_addrecord
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,30 +132,43 @@ class MessagesTableViewController: UITableViewController {
     @objc func refreshList() {
         print("Refreshing list!")
         
+        // BEGIN ck_query
+        // Find all records
         let allRecordsPredicate = NSPredicate(format: "TRUEPREDICATE")
         
-        let sortDescriptor = NSSortDescriptor(key: "modificationDate", ascending: false)
+        // Sort by record modification date
+        let sortDescriptor = NSSortDescriptor(key: "modificationDate",
+                                              ascending: false)
         
-        let query = CKQuery(recordType: NoteRecordType, predicate: allRecordsPredicate)
+        // Build the query
+        let query = CKQuery(recordType: NoteRecordType,
+                            predicate: allRecordsPredicate)
         
         query.sortDescriptors = [sortDescriptor]
         
-        
+        // Perform the query
         self.database.perform(query, inZoneWith: nil) { (records, error) in
             
             if let error = error {
                 print("Failed to query records: \(error)")
             } else if let records = records {
-                self.records = records
                 print("Loaded \(records.count) records.")
+                // BEGIN ck_query_table
+                self.records = records
+                
                 self.tableView.reloadData()
+                // END ck_query_table
             } else {
+                // This shouldn't happen
                 fatalError("Failed to query records, but also didn't get an error?")
             }
             
+            // BEGIN ck_query_table
             self.refreshControl?.endRefreshing()
+            // END ck_query_table
             
         }
+        // END ck_query
         
     }
     
@@ -183,9 +208,15 @@ class MessagesTableViewController: UITableViewController {
         
         let record = self.records[indexPath.row]
         
+        // BEGIN ck_record_access
+        // 'record' is a CKRecord object
+        
+        // Getting a string key, and fall back to the empty string
         let message = record.object(forKey: "contents") as? String ?? ""
         
+        // Getting a date key, and fall back to the current date
         let date = record.object(forKey: "modifiedAt") as? Date ?? Date()
+        // END ck_record_access
         
         let dateString = self.dateFormatter.string(from: date)
         
@@ -212,9 +243,11 @@ class MessagesTableViewController: UITableViewController {
             
             let record = self.records[indexPath.row]
             
-            
-            
-            self.database.delete(withRecordID: record.recordID, completionHandler: { (recordID, error) in
+            // BEGIN ck_delete
+            // 'record' is the CKRecord object we want to remove from
+            // the databse; get this by doing a query
+            self.database.delete(withRecordID: record.recordID,
+                                 completionHandler: { (recordID, error) in
                 
                 if let error = error {
                     print("Error removing record: \(error)")
@@ -225,6 +258,7 @@ class MessagesTableViewController: UITableViewController {
                 }
                 
             })
+            // END ck_delete
             
             self.records.remove(at: indexPath.row)
             

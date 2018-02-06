@@ -214,8 +214,29 @@ class ViewController: UIViewController {
         // END constraint_adding
         
         
+        // Loading SceneKit files
+        // BEGIN scn_loading
+        if let loadedScene = SCNScene(named: "SceneFile.scn") {
+            
+            // Get a copy of the root node of this scene
+            let newSceneContents = loadedScene.rootNode.clone()
+            
+            // Add it to this scene
+            scene.rootNode.addChildNode(newSceneContents)
+        }
+        // END scn_loading
         
-        
+        // Loading particle systems
+        // BEGIN scn_particles
+        if let particleSystem = SCNParticleSystem(named: "Fire.scnp", inDirectory: nil) {
+            let particlesNode = SCNNode()
+            particlesNode.position = SCNVector3(2, 5, 5)
+            
+            particlesNode.addParticleSystem(particleSystem)
+            
+            scene.rootNode.addChildNode(particlesNode)
+        }
+        // END scn_particles
         
         // Loading Collada files
         // BEGIN collada_loading

@@ -13,10 +13,11 @@
 		68326D3319AC0DFF00AE1247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68326D3119AC0DFF00AE1247 /* Main.storyboard */; };
 		68326D3519AC0DFF00AE1247 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68326D3419AC0DFF00AE1247 /* Images.xcassets */; };
 		68326D4119AC0DFF00AE1247 /* SceneKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68326D4019AC0DFF00AE1247 /* SceneKitTests.swift */; };
-		68326D4B19AC0E1000AE1247 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68326D4A19AC0E1000AE1247 /* SceneKit.framework */; };
 		68326D4D19AC3D6300AE1247 /* Transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 68326D4C19AC3D6200AE1247 /* Transparent.png */; };
+		68D573632023F96500106DE0 /* SceneFile.scn in Resources */ = {isa = PBXBuildFile; fileRef = 68D573622023F96500106DE0 /* SceneFile.scn */; };
+		68D57366202413C400106DE0 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 68D57364202413C400106DE0 /* spark.png */; };
+		68D57367202413C400106DE0 /* Fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 68D57365202413C400106DE0 /* Fire.scnp */; };
 		68EDDC871A9AD74800D5D19E /* Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 68EDDC861A9AD74800D5D19E /* Ball.png */; };
-		68EF145119B31803006110EC /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EF145019B31803006110EC /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +41,11 @@
 		68326D3A19AC0DFF00AE1247 /* SceneKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SceneKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68326D3F19AC0DFF00AE1247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68326D4019AC0DFF00AE1247 /* SceneKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitTests.swift; sourceTree = "<group>"; };
-		68326D4A19AC0E1000AE1247 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		68326D4C19AC3D6200AE1247 /* Transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transparent.png; sourceTree = "<group>"; };
+		68D573622023F96500106DE0 /* SceneFile.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = SceneFile.scn; sourceTree = "<group>"; };
+		68D57364202413C400106DE0 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		68D57365202413C400106DE0 /* Fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Fire.scnp; sourceTree = "<group>"; };
 		68EDDC861A9AD74800D5D19E /* Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ball.png; sourceTree = "<group>"; };
-		68EF145019B31803006110EC /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68EF145119B31803006110EC /* SpriteKit.framework in Frameworks */,
-				68326D4B19AC0E1000AE1247 /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +69,6 @@
 		68326D1F19AC0DFF00AE1247 = {
 			isa = PBXGroup;
 			children = (
-				68EF145019B31803006110EC /* SpriteKit.framework */,
-				68326D4A19AC0E1000AE1247 /* SceneKit.framework */,
 				68326D2A19AC0DFF00AE1247 /* SceneKit */,
 				68326D3D19AC0DFF00AE1247 /* SceneKitTests */,
 				68326D2919AC0DFF00AE1247 /* Products */,
@@ -97,6 +95,9 @@
 				68326D4C19AC3D6200AE1247 /* Transparent.png */,
 				68326D3419AC0DFF00AE1247 /* Images.xcassets */,
 				68326D2B19AC0DFF00AE1247 /* Supporting Files */,
+				68D573622023F96500106DE0 /* SceneFile.scn */,
+				68D57364202413C400106DE0 /* spark.png */,
+				68D57365202413C400106DE0 /* Fire.scnp */,
 			);
 			path = SceneKit;
 			sourceTree = "<group>";
@@ -175,9 +176,11 @@
 				TargetAttributes = {
 					68326D2719AC0DFF00AE1247 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5V2A4389PA;
 					};
 					68326D3919AC0DFF00AE1247 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5V2A4389PA;
 						TestTargetID = 68326D2719AC0DFF00AE1247;
 					};
 				};
@@ -207,7 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				682E8AF219AC688C005DB76E /* Critter.dae in Resources */,
+				68D57367202413C400106DE0 /* Fire.scnp in Resources */,
+				68D573632023F96500106DE0 /* SceneFile.scn in Resources */,
 				68326D4D19AC3D6300AE1247 /* Transparent.png in Resources */,
+				68D57366202413C400106DE0 /* spark.png in Resources */,
 				68EDDC871A9AD74800D5D19E /* Ball.png in Resources */,
 				68326D3319AC0DFF00AE1247 /* Main.storyboard in Resources */,
 				68326D3519AC0DFF00AE1247 /* Images.xcassets in Resources */,
@@ -367,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				INFOPLIST_FILE = SceneKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
@@ -379,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				INFOPLIST_FILE = SceneKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.com.secretlab.$(PRODUCT_NAME:rfc1034identifier)";
@@ -390,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -410,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5V2A4389PA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
