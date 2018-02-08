@@ -53,20 +53,20 @@ class ViewController: UIViewController {
     }
     
     func applicationDidBecomeActive(notification : Notification) {
-        NSLog("Application became active")
+        print("Application became active")
     }
     
     func applicationDidEnterBackground(notification : Notification) {
-        NSLog("Application entered background - unload textures!")
+        print("Application entered background - unload textures!")
     }
     
     func applicationWillEnterForeground(notification : Notification) {
-        NSLog("Application will enter foreground - reload " +
+        print("Application will enter foreground - reload " +
             "any textures that were unloaded")
     }
     
     func applicationWillResignActive(notification : Notification) {
-        NSLog("Application will resign active - pause the game now!")
+        print("Application will resign active - pause the game now!")
     }
     
     deinit {
@@ -76,5 +76,7 @@ class ViewController: UIViewController {
     // END enteringandexiting_example
     
 }
+
+PlaygroundPage.current.liveView = ViewController()
 
 //: [Next](@next)

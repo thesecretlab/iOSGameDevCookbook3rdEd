@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit
+import PlaygroundSupport
 
 // BEGIN displaylink_import
 import QuartzCore
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
         displayLink?.invalidate()
         displayLink = nil
         // END displaylink_remove
-        
+ 
         
     }
     
@@ -48,9 +49,9 @@ class ViewController: UIViewController {
     }
     // END displaylink_update
     
-    
-    
 }
+
+PlaygroundPage.current.liveView = ViewController()
 
 
 //: [Next](@next)

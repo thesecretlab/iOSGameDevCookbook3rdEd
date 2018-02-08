@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit
+import PlaygroundSupport
 
 class ViewController: UIViewController {
     
@@ -13,7 +14,7 @@ class ViewController: UIViewController {
     @objc
     func updateWithTimer(timer: Timer) {
         // Timer went off; update the game
-        NSLog("Timer went off!")
+        print("Timer went off!")
     }
     // END timer_method
     
@@ -29,15 +30,19 @@ class ViewController: UIViewController {
                                                             repeats: true)
         // END timer_start
         
+        
         // BEGIN timer_stop
         // Stop a timer
         self.timer?.invalidate()
         self.timer = nil
         // END timer_stop
+ 
         
     }
     
 }
+
+PlaygroundPage.current.liveView = ViewController()
 
 
 //: [Next](@next)

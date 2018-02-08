@@ -5,17 +5,18 @@ import Foundation
 // BEGIN array_filtering
 let array = ["One", "Two", "Three", "Four", "Five"]
 
-NSLog("Original array: \(array)")
+print("Original array: \(array)")
 
-let filteredArray = filter(array) { (element) -> Bool in
-    if element.rangeOfString("e") != nil {
+let filteredArray = array.filter { (element) -> Bool in
+    
+    if element.range(of: "e") != nil {
         return true
     } else {
         return false
     }
 }
 
-NSLog("Filtered array: \(filteredArray)")
+print("Filtered array: \(filteredArray)")
 // END array_filtering
 
 //: [Next](@next)

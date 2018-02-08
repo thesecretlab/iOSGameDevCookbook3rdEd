@@ -3,6 +3,10 @@
 import Foundation
 import UIKit
 
+import PlaygroundSupport
+
+
+
 class ViewController: UIViewController {
     
     // BEGIN game_start_time_storage
@@ -21,16 +25,16 @@ class ViewController: UIViewController {
         // BEGIN game_start_time_get
         let now = Date()
         let timeSinceGameStart = now
-            .timeIntervalSinceDate(self.gameStartDate!)
+            .timeIntervalSince(self.gameStartDate!)
         NSLog("The game started \(timeSinceGameStart) seconds ago")
         // END game_start_time_get
         
         // BEGIN game_start_time_format
         let hours = timeSinceGameStart / 3600.0 // 3600 seconds in an hour
-        let minutes = timeSinceGameStart % 3600.0 / 60.0 // 60 seconds in a minute
-        let seconds = timeSinceGameStart % 60.0 // remaining seconds
+        let minutes = timeSinceGameStart.truncatingRemainder(dividingBy: 3600) / 60.0 // 60 seconds in a minute
+        let seconds = timeSinceGameStart.truncatingRemainder(dividingBy: 3600) / 60.0 // remaining seconds
         
-        NSLog("Time elapsed: \(hours):\(minutes):\(seconds)")
+        print("Time elapsed: \(hours):\(minutes):\(seconds)")
         // END game_start_time_format
         
         
@@ -42,5 +46,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+PlaygroundPage.current.liveView = ViewController()
 
 //: [Next](@next)
