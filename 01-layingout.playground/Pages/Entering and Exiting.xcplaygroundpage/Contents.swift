@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         center.addObserver(self,
                            selector: didBecomeActive,
-                           name: NSNotification.Name.UIApplicationDidBecomeActive,
+                           name: Notification.Name.UIApplicationDidBecomeActive,
                            object: nil)
         
         center.addObserver(self,

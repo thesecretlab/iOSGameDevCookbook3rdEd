@@ -14,14 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        // BEGIN usage
+        // BEGIN currency_usage
         let currency = CurrencyManager()
         
         currency.gold = 45
         currency.gems = 21
         
         currency.endGame()
-        // END usage
+        // END currency_usage
 
     }
 

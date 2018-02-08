@@ -8,9 +8,9 @@
 
 import UIKit
 
-// BEGIN import
+// BEGIN controllers_import
 import GameController
-// END import
+// END controllers_import
 
 class ViewController: UIViewController {
     
@@ -18,14 +18,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // BEGIN list_controllers
+        // BEGIN controllers_list_controllers
         for controller in GCController.controllers() {
             NSLog("Found a controller: \(controller)")
         }
-        // END list_controllers
+        // END controllers_list_controllers
         
         
-        // BEGIN wireless_search
+        // BEGIN controllers_wireless_search
         // Once called, you'll receive
         // GCControllerDidConnectNotification and
         // GCControllerDidDisconnectNotification for
@@ -33,10 +33,10 @@ class ViewController: UIViewController {
         GCController.startWirelessControllerDiscovery { () -> Void in
             NSLog("Finished searching for wireless controllers")
         }
-        // END wireless_search
+        // END controllers_wireless_search
         
         
-        // BEGIN notifications
+        // BEGIN controllers_notifications
         
         let connectedSelector = #selector(self.controllerConnected(notification:))
         let disconnectedSelector = #selector(self.controllerDisconnected(notification:))
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                                                        selector: disconnectedSelector,
                                                        name: .GCControllerDidDisconnect,
                                                        object: nil)
-        // END notifications
+        // END controllers_notifications
         
         
         
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         
         NSLog("Controller connected: \(controller.vendorName ?? "generic controller")")
         
-        // BEGIN controller_type
+        // BEGIN controllers_controller_type
         if controller.extendedGamepad != nil {
             // It's an extended gamepad
             NSLog("This is an extended gamepad")
@@ -74,58 +74,58 @@ class ViewController: UIViewController {
             // It's something else entirely, and probably can't be used by your game\
             NSLog("I don't know what kind of gamepad this is")
         }
-        // END controller_type
+        // END controllers_controller_type
         
         
         // Check if this controller is physically connected
-        // BEGIN attached
+        // BEGIN controllers_attached
         if controller.isAttachedToDevice {
             NSLog("This gamepad is physically attached")
         } else {
             NSLog("This gamepad is wireless")
         }
-        // END attached
+        // END controllers_attached
         
         
         // Turn on the first light on the controller
-        // BEGIN playerindex
+        // BEGIN controllers_playerindex
         controller.playerIndex = GCControllerPlayerIndex.index1
-        // END playerindex
+        // END controllers_playerindex
         
         // Getting info from the controller
-        // BEGIN button_values
+        // BEGIN controllers_button_values
         // Pressed (true/false)
         let isButtonAPressed = controller.gamepad?.buttonA.isPressed
         
         // Pressed amount (0.0 .. 1.0)
         let buttonAPressAmount = controller.gamepad?.buttonA.value
-        // END button_values
+        // END controllers_button_values
         
-        // BEGIN axis_values
+        // BEGIN controllers_axis_values
         let horizontalAxis = controller.gamepad?.dpad.xAxis
         
         // Alternatively, just ask if the left button is pressed
         let isLeftDirectionPressed = controller.gamepad?.dpad.left.isPressed
-        // END axis_values
+        // END controllers_axis_values
         
-        // BEGIN valuechanged
+        // BEGIN controllers_valuechanged
         controller.gamepad?.buttonA.valueChangedHandler
             = { (input: GCControllerButtonInput!, value:Float, pressed:Bool) in
                 
                 NSLog("Button A pressed: \(pressed)")
                 
         }
-        // END valuechanged
+        // END controllers_valuechanged
         
         
-        // BEGIN pause
+        // BEGIN controllers_pause
         controller.controllerPausedHandler =
             { (controller: GCController!) in
                 
                 NSLog("Pause button pressed")
                 
         }
-        // END pause
+        // END controllers_pause
         
     }
     

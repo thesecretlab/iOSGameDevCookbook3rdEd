@@ -8,7 +8,7 @@
 
 import UIKit
 
-// BEGIN rotation
+// BEGIN rotationgesture_rotation
 class ViewController: UIViewController {
     
     @IBOutlet weak var rotationView: UIView!
@@ -64,5 +64,5 @@ class ViewController: UIViewController {
     }
 
 }
-// END rotation
+// END rotationgesture_rotation
 

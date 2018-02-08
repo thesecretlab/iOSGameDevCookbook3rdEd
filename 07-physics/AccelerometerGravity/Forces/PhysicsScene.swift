@@ -8,20 +8,20 @@
 
 import SpriteKit
 
-// BEGIN import
+// BEGIN motion_import
 import CoreMotion
-// END import
+// END motion_import
 
 class PhysicsScene: SKScene {
     
-    // BEGIN motionmanager_property
+    // BEGIN motion_motionmanager_property
     let motionManager = CMMotionManager()
-    // END motionmanager_property
+    // END motion_motionmanager_property
     
     override init(size: CGSize) {
         super.init(size: size)
         
-        // BEGIN motionmanager_update
+        // BEGIN motion_motionmanager_update
         motionManager.startDeviceMotionUpdates(
             to: OperationQueue.main, withHandler: { (motion, error) -> Void in
                 if let motion = motion {
@@ -37,7 +37,7 @@ class PhysicsScene: SKScene {
                     fatalError("Failed to get motion data OR error?")
                 }
         })
-        // END motionmanager_update
+        // END motion_motionmanager_update
         
         // Add a ball
         let ball = SKSpriteNode(color:SKColor.red,

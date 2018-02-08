@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // BEGIN usage
+        // BEGIN assetmanagement_usage
         // Get the list of all .png files in the bundles, or the empty array
         let urls = Bundle.main
             .urls(forResourcesWithExtension: "png",
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                 fatalError("Didn't get data or an error; this should not happen!")
             }
         }
-        // END usage
+        // END assetmanagement_usage
         
     }
     

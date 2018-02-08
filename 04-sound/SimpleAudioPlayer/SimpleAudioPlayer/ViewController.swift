@@ -8,9 +8,9 @@
 
 import UIKit
 
-// BEGIN avfoundation_import
+// BEGIN player_avfoundation_import
 import AVFoundation
-// END avfoundation_import
+// END player_avfoundation_import
 
 class ViewController: UIViewController {
     
@@ -19,65 +19,65 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // BEGIN creating
-        // BEGIN resource
+        // BEGIN player_creating
+        // BEGIN player_resource
         guard let soundFileURL = Bundle.main.url(forResource: "TestSound",
                                                  withExtension:"wav") else {
                                                     print("URL not found")
                                                     return
         }
-        // END resource
+        // END player_resource
         
-        // BEGIN create
+        // BEGIN player_create
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: soundFileURL)
         } catch let error {
             print("Failed to load the sound: \(error)")
         }
-        // END create
+        // END player_create
         
         audioPlayer?.prepareToPlay()
-        // END creating
+        // END player_creating
         
     }
     
     @IBAction func playSound(sender : AnyObject) {
         
-        // BEGIN play
+        // BEGIN player_play
         audioPlayer?.play()
-        // END play
+        // END player_play
         
         /* 
-         // BEGIN pause_stop
+         // BEGIN player_pause_stop
          // To pause:
          audioPlayer?.pause()
          // To stop:
          audioPlayer?.stop()
-         // END pause_stop
+         // END player_pause_stop
          
          // To rewind:
-         // BEGIN rewind
+         // BEGIN player_rewind
          audioPlayer.currentTime = 0
-         // END rewind
+         // END player_rewind
          */
     }
     
     @IBAction func loopModeChanged(loopSwitch : UISwitch) {
         
         if (loopSwitch.isOn) {
-            // BEGIN loop
+            // BEGIN player_loop
             audioPlayer?.numberOfLoops = -1
-            // END loop
+            // END player_loop
         } else {
-            // BEGIN no_loop
+            // BEGIN player_no_loop
             audioPlayer?.numberOfLoops = 0
-            // END no_loop
+            // END player_no_loop
         }
         
         /* To loop one time (ie play twice):
-         // BEGIN loop_once
+         // BEGIN player_loop_once
          audioPlayer?.numberOfLoops = 1
-         // END loop_once
+         // END player_loop_once
          */
     }
 }

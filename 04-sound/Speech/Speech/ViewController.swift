@@ -11,9 +11,9 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    // BEGIN create
+    // BEGIN speech_create
     var speechSynthesizer = AVSpeechSynthesizer()
-    // END create
+    // END speech_create
     
     @IBOutlet weak var textToSpeakField : UITextField!
 
@@ -21,30 +21,30 @@ class ViewController: UIViewController {
         
         /* Stopping speech:
 
-        // BEGIN stop
+        // BEGIN speech_stop
         // Stop speaking immediately
         self.speechSynthesizer.pauseSpeaking(at: AVSpeechBoundary.immediate)
         // Stop speaking after the current word
         self.speechSynthesizer.pauseSpeaking(at: AVSpeechBoundary.word)
-        // END stop
+        // END speech_stop
         
         // Continuing speech:
-        // BEGIN continue
+        // BEGIN speech_continue
         self.speechSynthesizer.continueSpeaking()
-        // END continue
+        // END speech_continue
         
         */
         
         // Generate a new utterance from a string
         let textToSpeak = self.textToSpeakField.text ?? ""
-        // BEGIN utterance
+        // BEGIN speech_utterance
         let utterance = AVSpeechUtterance(string: textToSpeak)
-        // END utterance
+        // END speech_utterance
         
         // Speak the utterance
-        // BEGIN speak
+        // BEGIN speech_speak
         self.speechSynthesizer.speak(utterance)
-        // END speak
+        // END speech_speak
     }
     
     

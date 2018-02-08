@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     
     @IBAction func playSound1(sender : AnyObject) {
         
-        // BEGIN usage
+        // BEGIN multipleplayers_usage
         if let url = Bundle.main.url(forResource: "TestSound",
                                                           withExtension: "wav") {
             let player = AVAudioPlayerPool.player(url: url)
             player?.play()
         }
-        // END usage
+        // END multipleplayers_usage
         
     }
     
