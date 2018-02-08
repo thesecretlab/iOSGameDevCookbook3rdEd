@@ -12,24 +12,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var draggedView: UIView!
     
-    // BEGIN drag
+    // BEGIN dragging_drag
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // BEGIN interaction
+        // BEGIN dragging_interaction
         self.draggedView.isUserInteractionEnabled = true
-        // END interaction
+        // END dragging_interaction
         
-        // BEGIN setup
+        // BEGIN dragging_setup
         let dragged = #selector(ViewController.dragged(dragGesture:))
         
         let drag = UIPanGestureRecognizer(target: self,
                                           action: dragged)
         self.draggedView.addGestureRecognizer(drag)
-        // END setup
+        // END dragging_setup
     }
     
-    // BEGIN dragfunc
+    // BEGIN dragging_dragfunc
     @objc func dragged(dragGesture: UIPanGestureRecognizer) {
         
         if dragGesture.state == .began ||
@@ -47,8 +47,8 @@ class ViewController: UIViewController {
         }
         
     }
-    // END dragfunc
-    // END drag
+    // END dragging_dragfunc
+    // END dragging_drag
     
     
     override func didReceiveMemoryWarning() {

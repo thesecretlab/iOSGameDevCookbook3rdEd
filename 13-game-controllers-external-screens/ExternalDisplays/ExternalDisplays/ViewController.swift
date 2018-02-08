@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // BEGIN log
+        // BEGIN externaldisplay_log
         for connectedScreen in UIScreen.screens {
             if connectedScreen == UIScreen.main {
                 NSLog("Main screen: \(connectedScreen)")
@@ -22,16 +22,16 @@ class ViewController: UIViewController {
                 NSLog("External screen: \(connectedScreen)")
             }
         }
-        // END log
+        // END externaldisplay_log
         
         // Getting the main screen:
-        // BEGIN mainscreen
+        // BEGIN externaldisplay_mainscreen
         let mainScreen = UIScreen.main
-        // END mainscreen
+        // END externaldisplay_mainscreen
         
         _ = mainScreen
         
-        // BEGIN external_screen
+        // BEGIN externaldisplay_external_screen
         if UIScreen.screens.count >= 2 {
             
             // This next step requires that there's a view controller
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
                 window.screen = connectedScreen
             }
         }
-        // END external_screen
+        // END externaldisplay_external_screen
         
     }
     

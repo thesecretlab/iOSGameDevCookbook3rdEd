@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         let destinationURL = self.audioRecordingURL
         
-        // BEGIN setup
+        // BEGIN recording_setup
         // destinationURL is the location of where we want to store our recording
         
         do {
@@ -31,20 +31,20 @@ class ViewController: UIViewController {
         }
         
         audioRecorder?.prepareToRecord()
-        // END setup
+        // END recording_setup
         
     }
     
     var audioRecordingURL : URL {
-        // BEGIN documents_url
+        // BEGIN recording_documents_url
         let documentsURL = FileManager.default
             .urls(for: FileManager.SearchPathDirectory.documentDirectory,
                   in:FileManager.SearchPathDomainMask.userDomainMask).last!
-        // END documents_url
+        // END recording_documents_url
         
-        // BEGIN filename
+        // BEGIN recording_filename
         return documentsURL.appendingPathComponent("RecordedSound.wav")
-        // END filename
+        // END recording_filename
         
     }
     
@@ -52,14 +52,14 @@ class ViewController: UIViewController {
     @IBAction func startRecording(sender : UIButton) {
         
         if (audioRecorder?.isRecording == true) {
-            // BEGIN stop
+            // BEGIN recording_stop
             audioRecorder?.stop()
-            // END stop
+            // END recording_stop
             sender.setTitle("Start Recording", for:UIControlState.normal)
         } else {
-            // BEGIN record
+            // BEGIN recording_record
             audioRecorder?.record()
-            // END record
+            // END recording_record
             sender.setTitle("Stop Recording", for:UIControlState.normal)
         }
         

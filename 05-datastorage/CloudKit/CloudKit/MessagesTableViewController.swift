@@ -34,13 +34,16 @@ class MessagesTableViewController: UITableViewController {
     
     @IBAction func addMessage(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Add Message", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add Message",
+                                      message: nil, preferredStyle: .alert)
         
         alert.addTextField { (textField) in
             
         }
         
-        alert.addAction(UIAlertAction(title: "Post", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: "Post",
+                                      style: .default,
+                                      handler: { (UIAlertAction) in
             
             let message = alert.textFields?.first?.text ?? ""
             
@@ -136,15 +139,17 @@ class MessagesTableViewController: UITableViewController {
         // Find all records
         let allRecordsPredicate = NSPredicate(format: "TRUEPREDICATE")
         
-        // Sort by record modification date
-        let sortDescriptor = NSSortDescriptor(key: "modificationDate",
-                                              ascending: false)
-        
         // Build the query
         let query = CKQuery(recordType: NoteRecordType,
                             predicate: allRecordsPredicate)
         
+        // BEGIN ck_query_sorting
+        // Sort by record modification date
+        let sortDescriptor = NSSortDescriptor(key: "modificationDate",
+                                              ascending: false)
+        
         query.sortDescriptors = [sortDescriptor]
+        // END ck_query_sorting
         
         // Perform the query
         self.database.perform(query, inZoneWith: nil) { (records, error) in
@@ -153,10 +158,14 @@ class MessagesTableViewController: UITableViewController {
                 print("Failed to query records: \(error)")
             } else if let records = records {
                 print("Loaded \(records.count) records.")
-                // BEGIN ck_query_table
-                self.records = records
                 
-                self.tableView.reloadData()
+                // We can now use these records.
+                // BEGIN ck_query_table
+                OperationQueue.main.addOperation {
+                    self.records = records
+                    
+                    self.tableView.reloadData()
+                }
                 // END ck_query_table
             } else {
                 // This shouldn't happen

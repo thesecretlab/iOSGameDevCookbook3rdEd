@@ -8,33 +8,33 @@
 
 import UIKit
 
-// BEGIN import
+// BEGIN spritekit_import
 import SpriteKit
-// END import
+// END spritekit_import
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // BEGIN setup
+        // BEGIN spritekit_setup
         if let spriteView = self.view as? SKView {
             spriteView.showsDrawCount = true
             spriteView.showsFPS = true
             spriteView.showsNodeCount = true
         }
-        // END setup
+        // END spritekit_setup
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // BEGIN show_scene
+        // BEGIN spritekit_show_scene
         let scene = TestScene()
         scene.size = self.view.bounds.size
         if let spriteView = self.view as? SKView {
             spriteView.presentScene(scene)
         }
-        // END show_scene
+        // END spritekit_show_scene
     }
     
 

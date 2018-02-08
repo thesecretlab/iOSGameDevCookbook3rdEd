@@ -2,7 +2,7 @@
 
 import UIKit
 
-// BEGIN log
+// BEGIN logging_log
 func Log(message: String,
     file: String = __FILE__,
     line : Int = __LINE__,
@@ -11,7 +11,7 @@ func Log(message: String,
     NSLog("\(function) (\(file.lastPathComponent):\(line)): \(message)")
         
 }
-// END log
+// END logging_log
 
 
 Log("Hi")
