@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         NSLog("Application became active")
     }
     
-    func applicationDidEnterBackground(notification : NSNotification) {
+    func applicationDidEnterBackground(notification : Notification) {
         NSLog("Application entered background - unload textures!")
     }
     

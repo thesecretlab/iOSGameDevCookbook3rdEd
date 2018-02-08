@@ -7,7 +7,7 @@ class ViewController: UIViewController {
     
     // BEGIN game_start_time_storage
     // Store the time when the game started as a property
-    var gameStartDate : NSDate?
+    var gameStartDate : Date?
     // END game_start_time_storage
     
     override func viewDidLoad() {
@@ -15,11 +15,11 @@ class ViewController: UIViewController {
         
         // BEGIN game_start_time_setup
         // When the game actually begins, store the current date
-        self.gameStartDate = NSDate()
+        self.gameStartDate = Date()
         // END game_start_time_setup
         
         // BEGIN game_start_time_get
-        let now = NSDate()
+        let now = Date()
         let timeSinceGameStart = now
             .timeIntervalSinceDate(self.gameStartDate!)
         NSLog("The game started \(timeSinceGameStart) seconds ago")
