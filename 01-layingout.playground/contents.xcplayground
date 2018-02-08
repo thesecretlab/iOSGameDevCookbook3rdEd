@@ -17,5 +17,6 @@
         <page name='Using State Machines - UNFINISHED'/>
         <page name='Randomisation'/>
         <page name='Graphs'/>
+        <page name='Using State Machines'/>
     </pages>
 </playground>
