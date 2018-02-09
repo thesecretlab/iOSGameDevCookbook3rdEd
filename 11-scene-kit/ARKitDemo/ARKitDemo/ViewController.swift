@@ -31,6 +31,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // we conform to the ARSCNViewDelegate
         // protocol, seen above.
         sceneView.delegate = self
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +57,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 
     // BEGIN arkit_hittest
+    // BEGIN arkit_hittest_signature
     @IBAction func sceneTapped(_ sender: UITapGestureRecognizer) {
+    // END arkit_hittest_signature
         
         // This method is run when the tap gesture recognizer fires.
         
