@@ -17,7 +17,6 @@ class SavedGame : Codable {
     var playerName = ""
     
     var achievements : Set<Achievements> = []
-    
 }
 
 let savedGame = SavedGame()
@@ -37,13 +36,69 @@ do {
     let data = try encoder.encode(savedGame)
     
     // We can now write the data to disk
+    print(String(data: data, encoding: .utf8)!)
 } catch let error {
     print("Failed to encode the saved game! \(error)")
 }
 // END serialization_encoding
 
-// BEGIN serialization_decoding
-let decoder = JSONDecoder()
+let string = """
+{"achievements":["foundAllSecretRooms"],"levelNumber":3,"playerName":"Grabthar"}
+"""
 
-//try! decoder.decode(SavedGame.self, from: data)
+/*
+ //This results in the following:
+// BEGIN serialization_example
+{"achievements":["foundAllSecretRooms"],"levelNumber":3,"playerName":"Grabthar"}
+// END serialization_example
+*/
+
+let data = string.data(using: .utf8)!
+
+// BEGIN serialization_decoding
+var decodedSavedGame : SavedGame?
+
+do {
+    let decoder = JSONDecoder()
+    
+    decodedSavedGame = try decoder.decode(SavedGame.self, from: data)
+} catch let error {
+    print("Failed to decode the saved game! \(error)")
+}
+
+// 'decodedSavedGame' will now be either nil or contain a SavedGame object
+decodedSavedGame?.playerName // = "Grabthar"
 // END serialization_decoding
+
+// BEGIN serialization_get_url
+let fileManager = FileManager.default
+guard let documentsURL = fileManager.urls(
+    for: FileManager.SearchPathDirectory.documentDirectory,
+    in:FileManager.SearchPathDomainMask.userDomainMask).last else {
+        
+        fatalError("Failed to find the documents folder!")
+}
+
+let savedGameURL = documentsURL
+    .appendingPathComponent("SavedGame.json")
+// END serialization_get_url
+
+// BEGIN serialization_write_data
+do {
+    try data.write(to: savedGameURL)
+} catch let error {
+    print("Error writing: \(error)")
+}
+// END serialization_write_data
+
+// BEGIN serialization_read_data
+var loadedData : Data?
+
+do {
+    loadedData = try Data(contentsOf: savedGameURL)
+} catch let error {
+    print("Error reading: \(error)")
+}
+
+// END serialization_read_data
+

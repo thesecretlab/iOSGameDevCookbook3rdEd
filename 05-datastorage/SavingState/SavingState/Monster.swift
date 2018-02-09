@@ -17,7 +17,7 @@ class Monster: Codable {
     var name = "GameObject"
     
     // Initializer used when creating a brand new object
-    override init() {
+    init() {
         
     }
 

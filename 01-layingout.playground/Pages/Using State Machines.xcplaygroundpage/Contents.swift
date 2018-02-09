@@ -5,6 +5,7 @@ import Foundation
 import GameplayKit
 
 // BEGIN statemachine_states
+// The 'Building Up an Army' state
 class BuildUpState : GKState {
     
     override func didEnter(from previousState: GKState?) {
@@ -13,7 +14,7 @@ class BuildUpState : GKState {
     
     // Called every time the state machine is updated
     override func update(deltaTime seconds: TimeInterval) {
-        print("Building up the army!")
+        print("Building in progress!")
     }
     
     // Called when we leave this state
@@ -35,7 +36,7 @@ class BuildUpState : GKState {
     
 }
 
-// Some additional states:
+// The 'Attacking with the Army' state
 class AttackState : GKState {
     
     override func didEnter(from previousState: GKState?) {
@@ -45,18 +46,25 @@ class AttackState : GKState {
     
     override func update(deltaTime seconds: TimeInterval) {
         // Called every time the state machine is updated
-        print("Attacking the enemy!")
+        print("Attack in progress!")
     }
 }
 
+// The 'Withdrawing the Army from Attack' state
 class WithdrawState : GKState {
     
 }
 
+// The 'Defeated' state
 class DefeatedState : GKState {
     override func didEnter(from previousState: GKState?) {
         // Called when we enter this state
         print("I'm defeated!")
+        
+        // Use 'previousState' to learn about the state we entered from
+        if previousState is BuildUpState {
+            print("I was in the middle of building up, too!")
+        }
     }
 }
 // END statemachine_states
@@ -66,7 +74,8 @@ class DefeatedState : GKState {
 let states = [
     BuildUpState(),
     AttackState(),
-    WithdrawState()
+    WithdrawState(),
+    DefeatedState()
 ]
 
 let stateMachine = GKStateMachine(states: states)
@@ -76,7 +85,12 @@ let stateMachine = GKStateMachine(states: states)
 stateMachine.enter(BuildUpState.self)
 stateMachine.enter(AttackState.self)
 stateMachine.enter(BuildUpState.self)
+stateMachine.enter(DefeatedState.self)
 // END statemachine_enterstates
+
+// BEGIN statemachine_current_state
+stateMachine.currentState
+// END statemachine_current_state
 
 // BEGIN statemachine_update
 stateMachine.update(deltaTime: 0.033)
@@ -86,4 +100,10 @@ stateMachine.update(deltaTime: 0.033)
 let state = stateMachine.state(forClass: BuildUpState.self)
 // END statemachine_get_state
 
+stateMachine.enter(BuildUpState.self)
+
+// BEGIN statemachine_can_enter_state
+stateMachine.canEnterState(WithdrawState.self)
+// = false
+// END statemachine_can_enter_state
 //: [Next](@next)
