@@ -12,28 +12,37 @@ import ARKit
 // BEGIN arkit_vc
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    // The reference to the SceneKit view.
     @IBOutlet weak var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        
+        // Load the scene file.
         guard let scene = SCNScene(named: "Cube.scn") else {
             fatalError("Failed to load scene!")
         }
         
+        // Provide the scene to the ARKit view.
         sceneView.scene = scene
         
+        // This view controller is the delegate
+        // for the ARSCNView. (This requires that
+        // we conform to the ARSCNViewDelegate
+        // protocol, seen above.
         sceneView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
+      
+        // Create an ARKit configuration for
+        // tracking movement through the world.
         let configuration = ARWorldTrackingConfiguration()
         
+        // Tell the ARSCNView to start running
+        // augmented reality with this configuration.
         sceneView.session.run(configuration)
     }
     
@@ -41,13 +50,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        // Pause the ARKit view when this view controller goes away.
         sceneView.session.pause()
     }
 
     // BEGIN arkit_hittest
     @IBAction func sceneTapped(_ sender: UITapGestureRecognizer) {
         
-        // Get the location of the touch in the view
+        // This method is run when the tap gesture recognizer fires.
+        
+        // Get the location of the touch in the view.
         let touchLocation = sender.location(ofTouch: 0, in: sceneView)
         
         print("Tapped at \(touchLocation)")
@@ -56,10 +68,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let hitLocations = sceneView.hitTest(touchLocation,
                                              types: .estimatedHorizontalPlane)
         
+        // Get the first location, if one was found
         guard let firstLocation = hitLocations.first else {
             print("Didn't find a hit location")
             return
         }
+        
+        // We'll now duplicate the 'box' object that was already present in the scene.
         
         // Find the first node named 'box'; we'll make a copy of it
         guard let cube = sceneView.scene.rootNode
