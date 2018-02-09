@@ -100,9 +100,9 @@ stateMachine.update(deltaTime: 0.033)
 let state = stateMachine.state(forClass: BuildUpState.self)
 // END statemachine_get_state
 
-stateMachine.enter(BuildUpState.self)
 
 // BEGIN statemachine_can_enter_state
+stateMachine.enter(BuildUpState.self)
 stateMachine.canEnterState(WithdrawState.self)
 // = false
 // END statemachine_can_enter_state
