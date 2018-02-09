@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     // END camera_label
     
     // BEGIN vision_model
+    // Produces a Vision wrapper for a CoreML model.
     lazy var model : VNCoreMLModel = {
         let coreMLModel = Inceptionv3().model
         
