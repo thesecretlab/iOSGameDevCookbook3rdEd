@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MultiplePlayers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-lh-upQ">
+                                <rect key="frame" x="116" y="231" width="88" height="30"/>
+                                <state key="normal" title="Play Sound 1">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3ok-u3-wRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-hh-sm0">
+                                <rect key="frame" x="115" y="269" width="90" height="30"/>
+                                <state key="normal" title="Play Sound 2">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EeT-57-wFW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEj-ID-Jsj">
+                                <rect key="frame" x="114.5" y="307" width="90" height="30"/>
+                                <state key="normal" title="Play Sound 3">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound3:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Vyh-AD-U4g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KEj-ID-Jsj" firstAttribute="top" secondItem="4eC-hh-sm0" secondAttribute="bottom" constant="8" id="9NY-aK-3h4"/>
+                            <constraint firstAttribute="centerX" secondItem="4eC-hh-sm0" secondAttribute="centerX" id="MBJ-Nm-G61"/>
+                            <constraint firstAttribute="centerY" secondItem="4eC-hh-sm0" secondAttribute="centerY" id="ML6-7e-e6Y"/>
+                            <constraint firstItem="eUn-lh-upQ" firstAttribute="centerX" secondItem="4eC-hh-sm0" secondAttribute="centerX" id="Mrs-BJ-k7y"/>
+                            <constraint firstItem="KEj-ID-Jsj" firstAttribute="centerX" secondItem="4eC-hh-sm0" secondAttribute="centerX" id="NTW-oN-2t8"/>
+                            <constraint firstItem="4eC-hh-sm0" firstAttribute="top" secondItem="eUn-lh-upQ" secondAttribute="bottom" constant="8" id="kAV-KO-y26"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

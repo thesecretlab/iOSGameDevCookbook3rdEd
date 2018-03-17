@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:physics/AccelerometerGravity/AccelerometerGravity.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/AddingImages/AddingImages.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/AddressLookup/AddressLookup.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/AssetManagement/AssetManagement.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ai/Behaviours/Behaviours.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/calculating-delta-times/CalculatingDeltaTimes.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/calculating-start-time/CalculatingStartTime.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Car/Car.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Collisions/Collisions.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Compass/Compass.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/component-based-layout/ComponentBasedLayout.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/Constraints/Constraints.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/CoordinateLookup/CoordinateLookup.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/CreatingViewControllers/CreatingViewControllers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/CurrencyManager/CurrencyManager.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/CustomGestureRecognizer/CustomGestureRecognizer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:game-controllers-external-screens/DetectingControllers/DetectingControllers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/DetectingTouches/DetectingTouches.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/cadisplaylink/DisplayLink.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Distances/Distances.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:game-controllers-external-screens/DragAndDrop/DragAndDrop.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Dragging/Dragging.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/DraggingImage/DraggingImage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/entering-and-exiting/EnteringAndExiting.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Explosion/Explosion.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:game-controllers-external-screens/ExternalDisplays/ExternalDisplays.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sound/Fading/Fading.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Forces/Forces.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/grid/Grid.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/iCloudSavedGames/iCloudSavedGames.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/inheritance-based-layout/InheritanceBasedLayout.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Joints/Joints.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/MagneticFields/MagneticFields.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/MovingWithCoreAnimation/MovingWithCoreAnimation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sound/MultiplePlayers/MultiplePlayers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sound/MusicLibrary/MusicLibrary.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/OverlayingMenus/OverlayingMenus.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:2dgraphics/ParallaxScrolling/ParallaxScrolling.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/pausing-game/Pausing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/PhysicsSprites/PhysicsSprites.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Pinching/Pinching.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/PoppingEffect/PoppingEffect.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/RotatingImage/RotatingImage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/RotatingIn3D/RotatingIn3D.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/RotationGesture/RotationGesture.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/SavingHighScores/SavingHighScores.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/SavingState/SavingState.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:scene-kit/SceneKit/SceneKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:game-controllers-external-screens/SelectingAirplayDevice/SelectingAirplayDevice.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Shake/Shake.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sound/SimpleAudioPlayer/SimpleAudioPlayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/SlicingImages/SlicingImages.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sound/SoundRecording/SoundRecording.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sound/Speech/Speech.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Speed/Speed.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:2dgraphics/SpriteWalkthrough/SpriteWalkthrough.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Steering/Steering.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/StructuredData/StructuredData.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/TapGestures/TapGestures.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/Theming/Theming.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:physics/Thrusters/Thrusters.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/Tilting/Tilting.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layingout/timers/Timers.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/TouchRegion/TouchRegion.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:datastorage/UserDefaults/UserDefaults.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:input/UserLocation/UserLocation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/UsingDynamics/UsingDynamics.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/UsingSegues/UsingSegues.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:views-and-menus/WorkingWithStoryboards/WorkingWithStoryboards.xcodeproj">
+   </FileRef>
+</Workspace>

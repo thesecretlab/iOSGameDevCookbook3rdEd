@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Inheritance-Based Layout'/>
+        <page name='Component-Based Layout'/>
+        <page name='Component-Based Layout with GameplayKit'/>
+        <page name='Calculating Delta Times'/>
+        <page name='Entering and Exiting'/>
+        <page name='Timers'/>
+        <page name='Updating When The Screen Refreshes'/>
+        <page name='Pausing a Game'/>
+        <page name='Calculating Start Times'/>
+        <page name='Working with Closures'/>
+        <page name='Operation Queues'/>
+        <page name='Filtering Arrays with Closures'/>
+        <page name='Tests and Assertions'/>
+        <page name='Using State Machines - UNFINISHED'/>
+        <page name='Randomisation'/>
+        <page name='Graphs'/>
+        <page name='Using State Machines'/>
+    </pages>
+</playground>
