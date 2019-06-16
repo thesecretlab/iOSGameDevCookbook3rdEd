@@ -1,6 +1,6 @@
 # iOS Game Development Cookbook, Third Edition
 
-Code from [Secret Lab](http://www.secretlab.com.au)'s book, [iOS Game Development Cookbook, Third Edition](LINK TBD).
+Code from [Secret Lab](http://www.secretlab.com.au)'s book, [iOS Game Development Cookbook, Third Edition](https://www.amazon.com/gp/product/149199908X/ref=dbs_a_def_rwt_bibl_vppi_i2).
 
 You can email us at [lab@secretlab.com.au](mailto:lab@secretlab.com.au)
 
